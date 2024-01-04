@@ -1,0 +1,74 @@
+---
+layout: layouts/blog.njk
+title: Artykuły
+description: Porady i ciekawostki dotyczące tworzenia stron, pozycjonowania i digital marketingu. 
+pagination: 
+    data: collections.posts
+    size: 15
+    alias: blog
+---
+
+<div class="col-md-10 mx-auto">
+  <div class="row gx-4 mb-3 mb-md-0">
+    <div class="col-md-10">
+      <h1 class="xxl split-text-lines">
+        {{ title }}<span class="dot">.</span>
+      </h1>
+    </div>
+    <div class="col-md-2 d-none d-lg-flex align-items-end pb-small fadeIn">
+      <svg width="87" height="152" viewBox="0 0 127 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M63.5 1L63.5 191" stroke="var(--color-dark-1)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M126 128.5L63.5 191" stroke="var(--color-dark-1)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M1 128.5L63.5 191" stroke="var(--color-dark-1)" stroke-width="3" stroke-linecap="round"/>
+        </svg>            
+    </div>
+  </div>
+
+<div class="pb-small">
+    <div class="line-x lx-2"></div>
+</div>
+ 
+      <div class="row gx-4"> 
+        {% for post in blog %} 
+        <div class="col-md-4 pb-medium"> 
+            <a href="{{ post.url }}" title="{{ post.data.title }}">
+                        <div class="portfolio-item fadeIn">
+                                <div class="parallax-wrap aspect_16-9">
+                                  {% blogImage "src/" + post.data.thumbnail, post.data.title %}
+                                </div>
+                        </div>
+                        </a>
+                        <p class="archive-category fadeIn">
+                            <small>
+                                {{ post.data.tags }}
+                            </small>
+                        </p>
+                        <a href="{{ post.url }}" title="{{ post.data.title }}">
+                            <h3 class="h5 split-text-lines line-clamp-2 mt-0 mb-2">
+                                {{ post.data.title }}
+                            </h3>
+                        </a>
+                        <a href="{{ post.url }}" title="Czytaj" class="button magnetic fadeIn mt-3 mb-4" data-strength="100" data-strength-text="50">
+                            <span>Czytaj</span>
+                            <svg width="11" height="11" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 1L1 13" stroke="var(--color-accent-1)" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M3 1H13V11" stroke="var(--color-accent-1)" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <div class="line-x lx-1 lx-op"></div>
+             </div> 
+      {% endfor %} 
+    </div>
+      <div class="row gx-4">
+</div>
+        <div class="col-md-6">
+          <nav>
+            <ul class="pagination d-flex fadeIn"> {%- for pageEntry in pagination.pages %} 
+              <li class="pagination-item">
+                <a class="pagination-link" title="Paginacja" href="{{ pagination.hrefs[ loop.index0 ] }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="active" {% endif %}>{{ loop.index }}</a>
+              </li> {%- endfor %} </ul>
+          </nav>
+        </div>

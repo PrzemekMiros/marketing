@@ -1,0 +1,116 @@
+{% include "partials/header.njk" %}
+
+<section class="pt-xlarge pb-small" data-scroll-section>
+  <div class="container">
+
+      <div class="offset-md-2 col-md-8">
+        <div class="single-post-title-wrap pb-md-small pb-small">
+          <h1 class="xxl split-text-lines single-post-title mt-0 mb-5">
+            {{ client }}
+          </h1>
+          <div class="row gx-5">
+            <div class="col-md-4">
+                    <p class="split-text-lines small">
+                        Kategoria
+                    </p>
+                    <div class="split-text-lines line-x lx-op"></div>
+                    <p class="split-text-lines mt-4">
+                      {{ category }}
+                    </p>
+
+            </div>
+            <div class="col-md-4">
+                <p class="split-text-lines small">
+                    Usługa
+                </p>
+                <div class="line-x lx-op"></div>
+                <p class="split-text-lines mt-4">
+                  Projekt, Kodowanie
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p class="split-text-lines small">
+                    Wykonano
+                </p>
+                <div class="line-x lx-op"></div>
+                <p class="split-text-lines mt-4">
+                  {{ date | dateDisplay }}
+                </p>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+    <div class="offset-md-1 col-md-10">
+        <div class="parallax-wrap aspect_16-13 fadeIn mb-4 mb-lg-5">
+           {% workImage "public" + imageMain, title, "single-post-image img-fluid" %}
+        </div>
+    </div>
+
+    <div class="row fadeIn">
+      <div class="offset-md-2 col-md-6">
+        {{ content | safe }}
+      </div>
+      <div class="offset-md-1 col-md-2">
+        <a
+        href="{{ link }}"
+        title="Zobacz online"
+        class="magnetic mt-4"
+        target="_blank"
+        rel="nofollow"
+        data-strength="100"
+        data-strength-text="50"
+      >
+          <svg width="55px" height="55px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+            <g><path fill="var(--color-dark-1)" d="M83.3,79.7c0,2-1.6,3.6-3.6,3.6H20.3c-2,0-3.6-1.6-3.6-3.6V20.3c0-2,1.6-3.6,3.6-3.6h23.4V9.5H20.3   c-6,0-10.8,4.8-10.8,10.8v59.4c0,6,4.8,10.8,10.8,10.8h59.4c6,0,10.8-4.8,10.8-10.8V56.3h-7.2V79.7z"/><polygon fill="var(--color-dark-1)" points="56.3,9.5 56.3,16.7 78.2,16.7 49.9,45 55,50.1 83.3,21.8 83.3,43.7 90.5,43.7 90.5,9.5  "/></g></svg>
+      </a>
+      </div>
+    </div>
+
+    <div class="pt-medium fadeIn">
+      <div class="line-x"></div>
+    </div>
+
+    <div class="post-navigation pt-small">
+      {%- if collections.works %} {%- set nextPost = collections.works |
+      getNextCollectionItem(page) %} {%- set previousPost = collections.works |
+      getPreviousCollectionItem(page) %} {%- if nextPost or previousPost %}
+      <ul class="d-flex flex-wrap fadeIn">
+        {%- if previousPost %}
+        <li class="hover-reveal-wrap col-md-6 prev d-none d-md-block">
+          <p class="mb-4">
+            <small> Poprzedni: </small>
+          </p>
+          <a
+            href="{{ previousPost.url | url }}"
+            title="{{ previousPost.data.client }}"
+            class="h2"
+            >{{ previousPost.data.title }}</a
+          >
+          <div class="hover-reveal">
+            <img src="{{ previousPost.data.thumbnail }}" class="hidden-img" />
+          </div>
+        </li>
+        {% endif %} {%- if nextPost %}
+        <li class="hover-reveal-wrap col-md-6 next">
+          <p class="mb-4">
+            <small> Kolejny: </small>
+          </p>
+          <a
+            href="{{ nextPost.url | url }}"
+            title="{{ nextPost.data.client }}"
+            class="h2"
+            >{{ nextPost.data.title }}</a
+          >
+          <div class="hover-reveal">
+            <img src="{{ nextPost.data.thumbnail }}" class="hidden-img" />
+          </div>
+        </li>
+        {% endif %}
+      </ul>
+      {%- endif %} {%- endif %}
+    </div>
+  </div>
+</section>
+
+{% include "partials/footer.njk" %}

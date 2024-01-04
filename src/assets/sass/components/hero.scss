@@ -1,0 +1,29 @@
+.hero {
+  position: relative
+}
+
+.hero-list p {
+  font-size: clamp(10px, 1vw, 17px)
+}
+
+.hero-circle-text {
+  height: 100%;
+  width: auto;
+  animation: rotateText 8s linear infinite;
+}
+
+.hero-circle-text text {
+  font-size: clamp(8px, 1.2vw, 10px);
+  letter-spacing: .15em;
+  fill: var(--color-dark-1);
+  opacity: .3;
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

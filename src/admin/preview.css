@@ -1,0 +1,11 @@
+img {
+    width: 100%;
+    height: auto
+}
+body {
+    font-family: sans-serif;
+}
+.react-codemirror2 {
+    height: 400px!important; 
+    overflow: scroll; 
+  }
