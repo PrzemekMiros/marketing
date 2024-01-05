@@ -1,6 +1,6 @@
 
 backend:
-  name: git-gateway
+  name: github
   repo: PrzemekMiros/starter
   branch: main 
   site_domain: 'https://2387059d.starter-ast.pages.dev/'
