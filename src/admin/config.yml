@@ -1,6 +1,12 @@
+
 backend:
   name: git-gateway
-  branch: main
+  repo: PrzemekMiros/starter
+  branch: main 
+  site_domain: 'https://2387059d.starter-ast.pages.dev/'
+  base_url: '/'
+  auth_endpoint: '/auth/'
+
   
 media_folder: "src/assets/img/"
 public_folder: "/assets/img/"
