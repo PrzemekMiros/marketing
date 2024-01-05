@@ -152,14 +152,6 @@ blockquote p {
   font-weight: 500
 }
 
-.capitalize {
-  text-transform: capitalize
-}
-
-.capitalize-f .char:first-child {
-  text-transform: capitalize
-}
-
 .uppercase {
   text-transform: uppercase
 }
@@ -170,14 +162,6 @@ blockquote p {
 
 .text-end {
   text-align: end
-}
-
-.color-heading { 
-  color: #fff
-}
-
-.color-text {
-  color: #bcbcbc
 }
 
 @media(min-width:767px) {

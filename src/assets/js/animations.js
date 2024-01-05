@@ -189,21 +189,7 @@ function animationMain() {
        }
      }; 
    };
-   
-   // Client logos
-   gsap.from(".client-item", {
-     opacity: 0,
-     autoAlpha: 0,
-     y: 20,
-     duration: 1,
-     delay: .3,
-     stagger: 0.12,
-     scrollTrigger: {
-       trigger: ".clients-wrap",
-       scroller: ".scrollContainer",
-     }
-   });
-     
+
    // Nav menu
    const menuToggle = document.getElementById("menuToggle");
    const menuBar = gsap.timeline();
@@ -288,45 +274,7 @@ function animationMain() {
        }
      });
      };
-   
-   // Scroll progress
-   if (document.querySelector(".scrollprogress")) {
-   gsap.to(".scrollprogress", {
-     height: "calc(100% - 65px)",
-     ease: 'none',
-     scrollTrigger: { 
-       scroller: ".scrollContainer",
-       trigger: ".content",
-       start: "top 80px",
-       end: "bottom 99%",
-       scrub: true,
-     }
-   });
-   };
-
-// Cursor gradient
-/*
-const cursor = document.querySelector('.bg-gradient');
-let mouseX = 0;
-let mouseY = 0;
-let cursorX = 0;
-let cursorY = 0;
-let speed = 0.05;
-function animate() {
-    let distX = mouseX - cursorX;
-    let distY = mouseY - cursorY;
-    cursorX = cursorX + (distX * speed);
-    cursorY = cursorY + (distY * speed);
-    cursor.style.left = cursorX + 'px';
-    cursor.style.top = cursorY + 'px';
-    requestAnimationFrame(animate);
-}
-animate();
-document.addEventListener('mousemove', (event) => {
-    mouseX = event.pageX;
-    mouseY = event.pageY;
-});
-*/
+  
 
 // Reveal images parallax
 if (document.querySelector(".works")) {
@@ -373,7 +321,6 @@ document.querySelector(".items-works").addEventListener("mouseenter", function (
       duration: .2, // Image fade in
     });
   });
-
 document.querySelector(".items-works").addEventListener("mouseleave", function () {
     gsap.to(slidePicWorks, {
       autoAlpha: 0,
@@ -382,39 +329,26 @@ document.querySelector(".items-works").addEventListener("mouseleave", function (
     });
   });
 };
-
 };
 };
-
-
 // Reveal images
-
 function imageReveal() {
   const revealContainers = document.querySelectorAll(".reveal");
-
   revealContainers.forEach((container) => {
     let clipPath;
-
-    // Left to right
     if (container.classList.contains("reveal--left")) {
       clipPath = "inset(0 0 0 100%)";
     }
-    // Right to left
     if (container.classList.contains("reveal--right")) {
       clipPath = "inset(0 100% 0 0)";
     }
-    // Top to bottom
     if (container.classList.contains("reveal--top")) {
       clipPath = "inset(0 0 100% 0)";
     }
-    // Bottom to top
     if (container.classList.contains("reveal--bottom")) {
       clipPath = "inset(100% 0 0 0)";
     }
-
     const image = container.querySelector("img");
-
-    // Animation trigger
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: container,
@@ -423,8 +357,6 @@ function imageReveal() {
         end: "bottom top",
       }
     });
-
-    // Animation timeline
     tl.set(container, { autoAlpha: 1 });
     tl.from(container, {
       clipPath,
@@ -442,14 +374,11 @@ function imageReveal() {
       ease: Power2.easeOut
     });
   });
-
   ScrollTrigger.refresh();
 }
-
 imageReveal();
 
 
-   
 // End animation
 }
    

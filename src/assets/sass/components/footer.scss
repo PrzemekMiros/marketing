@@ -3,11 +3,9 @@
     background-color: var(--color-light-2);
     overflow: hidden
 }
-
 .footer-parallax {
     position: relative
 } 
-
 .separator {
   position: absolute;
   top: 0;
@@ -16,11 +14,9 @@
   height: 10em;
   z-index: 9
 }
-
 .separator path {
   fill: var(--color-light-1);
 } 
-
 .footer-arrow {
   width: clamp(23px, 2.6vw, 36px);
   height: auto
@@ -32,19 +28,15 @@
 .footer-card li p {
   opacity: .6;
 }
-
 .footer-card li {
   margin-bottom: 0;
   font-size: 17px;
   color: var(--color-dark-1)
 }
-
 .footer-card svg {
   width: 44px;
   height: auto
 }
-
-
 @media(min-width:767px) {
     .site-footer {
         z-index: 0

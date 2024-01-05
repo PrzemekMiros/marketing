@@ -8,18 +8,15 @@
   transition: .4s ease-in-out;
   z-index: 20
 }
-
 .site-header.scrolled {
   pointer-events: none;
   transform: translateY(-70%);
   opacity: 0
 }
-
 .site-header.scrolled .menu-toggle,
 .site-header.scrolled .logo-wrap {
   pointer-events: none;
 }
-
 @keyframes headerFade {
   0% {
     opacity: 0
@@ -28,26 +25,21 @@
     opacity: 1
   }
 }
-
 .logo-wrap a {
   display: inline-block
 }
-
 .logo-wrap img {
   width: 195px;
   height: auto
 }
-
 .desktop-menu {
   width: 100%;
   text-align: center
 }
-
 .desktop-menu ul li {
   display: inline-block;
   margin-bottom: 0;
 }
-
 .menu-toggle {
   width: 48px;
   height: 48px;
@@ -57,18 +49,15 @@
   pointer-events: all;
   cursor: pointer
 }
-
 .menu-toggle-wrap {
   margin-top: -7px;
   display: flex
 }
-
 .hamburger {
   display: inline-block;
   width: 69%;
   margin: 0 auto;
 }
-
 .burger-line {
   display: block;
   width: 100%;
@@ -76,12 +65,10 @@
   background-color: #111;
   transition: .6s ease-in-out;
 }
-
 .bl-1 {
   margin-bottom: 0.5em;
   margin-top: .1em
 }
-
 .menu-open .bl-1 {
   transform: rotate(45deg) translateY(.2em) translateX(.2em)
 }

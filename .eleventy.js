@@ -30,16 +30,6 @@ module.exports = function(eleventyConfig) {
         return collectionApi.getFilteredByGlob('src/content/realizacje/**/*.md').reverse();
         });
 
-        // Collections services
-        eleventyConfig.addCollection('services', function(collectionApi) {
-        return collectionApi.getFilteredByGlob('src/content/uslugi/**/*.md').reverse();
-        });
-
-        // Collections products
-        eleventyConfig.addCollection('products', function(collectionApi) {
-        return collectionApi.getFilteredByGlob('src/content/produkty/**/*.md').reverse();
-        });
-
         // Collection faq
         eleventyConfig.addCollection("faq", function(collectionApi) {
         return collectionApi.getFilteredByGlob('src/content/faq/**/*.md');
@@ -81,7 +71,7 @@ module.exports = function(eleventyConfig) {
             srcset="${srcset['jpeg']}"
             width="${lowestSrc.width}"
             height="${lowestSrc.height}">`;
-      
+
           return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
         });
   
@@ -124,7 +114,6 @@ module.exports = function(eleventyConfig) {
       
           return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
         });
-  
 
         eleventyConfig.addNunjucksAsyncShortcode('workImage', async (src, alt) => {
           if (!alt) {
@@ -170,7 +159,6 @@ module.exports = function(eleventyConfig) {
           return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
         });
   
-        
 
       // Code blocks
       eleventyConfig.addPlugin(codeStyleHooks, {
@@ -186,7 +174,6 @@ module.exports = function(eleventyConfig) {
           }
         }, 
       });
-
 
     // Return your Object options:
     return {
