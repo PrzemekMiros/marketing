@@ -51,7 +51,7 @@
     --cc-z-index:999;
     --cc-bg:#fff;
     --cc-primary-color:#2c2f31;
-    --cc-secondary-color:#5e6266;
+    --cc-secondary-color:#494c4f;
     --cc-btn-primary-bg:#30363c;
     --cc-btn-primary-color:#fff;
     --cc-btn-primary-border-color:var(--cc-btn-primary-bg);
@@ -315,9 +315,9 @@ html.disable--interaction.show--consent,html.disable--interaction.show--consent 
     background: var(--color-dark-1);
     border-radius: var(--cc-btn-border-radius);
     color: var(--color-light-1);
-    font-size:.82em;
+    font-size:.88em;
     font-weight:500;
-    min-height:42px;
+    min-height:46px;
     padding:.5em 1em;
     text-align:center
 }
