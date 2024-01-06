@@ -15,20 +15,25 @@
 
 ### Features
 
-- Intro preloader 
+- Preloader 
+- Fluid fonts
 - Dark mode with local storage
 - Page transition
 - Smooth scroll
 - Magnetic buttons
 - Reveal split text
 - Parallax images
-- Fluid fonts
 
 ### Description
 
 Eleventy.js starter site. Optimized for Page Speed Insights.
 
+### Required
+
+Node.js, Git
+
 ### Run project
 
 npm install
+
 npm start

@@ -8,14 +8,14 @@ layout: null
     
         <url>
             <loc>
-                https://przemekmiros.pl
+                https://starter-ast.pages.dev/
             </loc>
             <lastmod>{{ page.date.toISOString() }}</lastmod>
         </url> 
        
     {% for page in collections.posts %}
         <url>
-            <loc>https://przemekmiros.pl{{ page.url | url }}</loc>
+            <loc>https://starter-ast.pages.dev/{{ page.url | url }}</loc>
             <lastmod>{{ page.date.toISOString() }}</lastmod>
         </url> 
     {% endfor %}
