@@ -26,4 +26,4 @@
 
 ### Description
 
-My starter site. Optimized for Page Speed Insights. Full SEO optimization.
+Eleventy.js starter site. Optimized for Page Speed Insights.
