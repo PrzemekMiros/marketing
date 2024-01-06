@@ -27,3 +27,8 @@
 ### Description
 
 Eleventy.js starter site. Optimized for Page Speed Insights.
+
+### Run project
+
+npm install
+npm start
