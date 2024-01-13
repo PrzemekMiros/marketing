@@ -27,45 +27,20 @@ video {
 .blur-load {
   position: relative;
   background-size: cover;
+  background-position: center;
 }
 
-.blur-load > img {
+.blur-load img {
   width: 100%;
   height: auto;
-  opacity: 0;
-  transition: opacity 250ms ease-in-out
+  opacity: 0
 }
 
-.blur-load.loaded > img {
+.blur-load.loaded img {
+  width: 100%;
+  height: auto;
   opacity: 1;
 }
-
-.blur-load::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  animation: pulse 2.5s infinite;
-  background-color: #fff;
-}
-
-.blur-load.loaded::before {
-  animation: none;
-  content: none;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 
 .blend-mode {
   mix-blend-mode: exclusion;
