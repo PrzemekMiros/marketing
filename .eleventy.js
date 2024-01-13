@@ -48,7 +48,8 @@ module.exports = function(eleventyConfig) {
             outputDir: './public/assets/img/',
           });
       
-          let lowestSrc = stats['jpeg'][0];
+          let lowestSrc = stats['jpeg'][0]; 
+          let largestSrc = stats['jpeg'][3];
       
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
@@ -69,8 +70,8 @@ module.exports = function(eleventyConfig) {
             src="${lowestSrc.url}"
             sizes='(min-width: 1024px) 1024px, 100vw'
             srcset="${srcset['jpeg']}"
-            width="${lowestSrc.width}"
-            height="${lowestSrc.height}">`;
+            width="${largestSrc.width}"
+            height="${largestSrc.height}">`;
 
           return `<div class="blur-load" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
         });
@@ -89,6 +90,7 @@ module.exports = function(eleventyConfig) {
           });
       
           let lowestSrc = stats['jpeg'][0];
+          let largestSrc = stats['jpeg'][3];
       
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
@@ -109,10 +111,10 @@ module.exports = function(eleventyConfig) {
             src="${lowestSrc.url}"
             sizes='(min-width: 1024px) 1024px, 100vw'
             srcset="${srcset['jpeg']}"
-            width="${lowestSrc.width}"
-            height="${lowestSrc.height}">`;
+            width="${largestSrc.width}"
+            height="${largestSrc.height}">`;
       
-          return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
+            return `<div class="blur-load" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
         });
   
 
@@ -129,6 +131,7 @@ module.exports = function(eleventyConfig) {
           });
       
           let lowestSrc = stats['jpeg'][0];
+          let largestSrc = stats['jpeg'][3];
       
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
@@ -149,10 +152,10 @@ module.exports = function(eleventyConfig) {
             src="${lowestSrc.url}"
             sizes='(min-width: 1024px) 1024px, 100vw'
             srcset="${srcset['jpeg']}"
-            width="${lowestSrc.width}"
-            height="${lowestSrc.height}">`;
+            width="${largestSrc.width}"
+            height="${largestSrc.height}">`;
       
-          return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
+            return `<div class="blur-load" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
         });
 
 

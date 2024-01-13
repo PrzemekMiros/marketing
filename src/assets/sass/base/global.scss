@@ -31,14 +31,11 @@ video {
 }
 
 .blur-load img {
-  width: 100%;
-  height: auto;
+  transition: .75s ease-in-out;
   opacity: 0
 }
 
 .blur-load.loaded img {
-  width: 100%;
-  height: auto;
   opacity: 1;
 }
 
