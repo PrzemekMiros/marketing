@@ -24,21 +24,50 @@ video {
   background-position: center;
 }
 
-.image-wrapper {
-  display: block;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
+.blur-load {
+  background-size: cover;
+  filter: blur(10px);
 }
 
-.image-wrapper img {
-  transition: opacity 0.3s ease-in-out;
-}
-
-.image-wrapper img[data-src] {
-  opacity: 1;
+.blur-load.loaded {
   filter: blur(0);
 }
+
+.blur-load img {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out
+}
+
+.blur-load.loaded img {
+  opacity: 1;
+}
+
+.blur-load::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: pulse 2.5s infinite;
+  background-color: white;
+}
+
+.blur-load.loaded::before {
+  animation: none;
+  content: none;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 
 .blend-mode {
   mix-blend-mode: exclusion;

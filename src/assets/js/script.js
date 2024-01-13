@@ -21,6 +21,26 @@ if (theme === "light") {
     document.querySelector("html").classList.add("light");
 };
 
+// Lazy blur images
+const blurImgWrap = document.querySelectorAll(".blur-load");
+
+blurImgWrap.forEach(item => {
+   const img = item.querySelector("img");
+
+   function loaded() {
+      item.classList.add("loaded");
+   }
+
+   if (img.complete) {
+      loaded();
+   } else {
+      img.addEventListener("load", loaded);
+   }
+   
+});
+
+
+
 if (document.querySelector('.swiper')) {
   var swiper = new Swiper(".swiper", {
     grabCursor: true,

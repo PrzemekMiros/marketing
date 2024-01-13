@@ -72,7 +72,7 @@ module.exports = function(eleventyConfig) {
             width="${lowestSrc.width}"
             height="${lowestSrc.height}">`;
 
-          return `<div class="blur-load" style="background-image: url('${lowestSrc.url}'); background-size: cover"><picture> ${source} ${img} </picture></div>`;
+          return `<div class="blur-load" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
         });
   
   
