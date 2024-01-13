@@ -26,19 +26,14 @@ video {
 
 .blur-load {
   background-size: cover;
-  filter: blur(10px);
 }
 
-.blur-load.loaded {
-  filter: blur(0);
-}
-
-.blur-load img {
+.blur-load > img {
   opacity: 0;
   transition: opacity 250ms ease-in-out
 }
 
-.blur-load.loaded img {
+.blur-load.loaded > img {
   opacity: 1;
 }
 
@@ -48,7 +43,7 @@ video {
   inset: 0;
   opacity: 0;
   animation: pulse 2.5s infinite;
-  background-color: white;
+  background-color: #fff;
 }
 
 .blur-load.loaded::before {
