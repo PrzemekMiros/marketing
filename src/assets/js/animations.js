@@ -45,8 +45,8 @@ function animationMain() {
   });
 
   // Paragraph --------------------------------------------------------------
-  if (document.querySelector(".split-text-lines")) {
-    let splitTextLines = [...document.querySelectorAll(".split-text-lines")];
+  if (document.querySelector(".split-lines")) {
+    let splitTextLines = [...document.querySelectorAll(".split-lines")];
     splitTextLines.forEach((element) => {
       let mySplitText = new SplitText(element, {
         type: "lines",
@@ -147,7 +147,7 @@ function animationMain() {
           attr: { d: pathTo },
         });
     });
-  }
+  };
 
   // Magnetic
   if (document.querySelector(".magnetic")) {
@@ -285,7 +285,7 @@ function animationMain() {
         ease: "none",
       });
     });
-  }
+  };
 
   // Acordion
   if (document.querySelector(".accordion")) {
@@ -303,66 +303,8 @@ function animationMain() {
             this.classList.toggle("open");
         }
       });
-  }
+  };
 
-  // Reveal images parallax
-  if (document.querySelector(".works")) {
-    if (window.matchMedia("(min-width: 767px)").matches) {
-      const elementsWorks = document.querySelectorAll(".item-work");
-      const slidePicWorks = document.querySelector("#gallery-work");
-      const slidePicsWorks = document.querySelector("#work-images");
-
-      gsap.set(slidePicWorks, { autoAlpha: 0 });
-
-      elementsWorks.forEach((element, index) => {
-        element.addEventListener("mouseenter", function () {
-          gsap.to(slidePicsWorks, {
-            marginTop: `-${320 * index}px`,
-            ease: "power2.out",
-            duration: 0.5, // Image in wrapper
-          });
-        });
-
-        element.addEventListener("mouseleave", function () {
-          gsap.to(element, {
-            color: "initial",
-            duration: 0.2, // Image fade out
-          });
-        });
-      });
-
-      window.addEventListener("mousemove", function (e) {
-        gsap.to(slidePicWorks, {
-          top: `${e.clientY}px`,
-          left: `${e.clientX}px`,
-          xPercent: -40,
-          yPercent: -45,
-          duration: 0.5, // Main image wrap
-        });
-      });
-
-      if (document.querySelector(".items-works")) {
-        document
-          .querySelector(".items-works")
-          .addEventListener("mouseenter", function () {
-            gsap.to(slidePicWorks, {
-              autoAlpha: 1,
-              scale: 1,
-              duration: 0.2, // Image fade in
-            });
-          });
-        document
-          .querySelector(".items-works")
-          .addEventListener("mouseleave", function () {
-            gsap.to(slidePicWorks, {
-              autoAlpha: 0,
-              scale: 0,
-              duration: 0.2, // Image fade in
-            });
-          });
-      }
-    }
-  }
   // Reveal images
   function imageReveal() {
     const revealContainers = document.querySelectorAll(".reveal");

@@ -3,14 +3,6 @@
   font-display: swap; 
   font-family: 'Poppins';
   font-style: normal;
-  font-weight: 300;
-  src: url('/assets/fonts/poppins-v20-latin_latin-ext-300.woff2') format('woff2'); 
-}
-
-@font-face {
-  font-display: swap; 
-  font-family: 'Poppins';
-  font-style: normal;
   font-weight: 400;
   src: url('/assets/fonts/poppins-v20-latin_latin-ext-regular.woff2') format('woff2'); 
 }
@@ -110,7 +102,7 @@ p, .paragraph, li {
   margin-bottom: 2em;
   font-family: var(--font-primary);
   font-size: clamp(15px, 1.2vw, 16px);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.8;
   color: var(--color-text)
 }

@@ -1,0 +1,35 @@
+<section class="pt-large pb-xlarge" data-scroll-section>
+    <div class="container">
+        <h2 class="xl split-lines">
+            Reveal images
+        </h2>
+        <div class="line-x mb-5"></div>
+        <div class="row g-5">
+            <div class="col-md-6">
+                <div class="reveal reveal--top">
+                    {% Image "src/assets/img/hero/bootstrap.png", "Bootstrap" %}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="reveal reveal--top">
+                    {% Image "src/assets/img/hero/bootstrap.png", "Bootstrap" %}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="reveal reveal--top reveal--overlay">
+                    {% Image "src/assets/img/hero/bootstrap.png", "Bootstrap" %}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="reveal reveal--top reveal--overlay">
+                    {% Image "src/assets/img/hero/bootstrap.png", "Bootstrap" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .reveal--overlay {
+        background: var(--color-accent-1)
+    }
+</style>
