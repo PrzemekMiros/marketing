@@ -25,10 +25,13 @@ video {
 }
 
 .blur-load {
+  position: relative;
   background-size: cover;
 }
 
 .blur-load > img {
+  width: 100%;
+  height: auto;
   opacity: 0;
   transition: opacity 250ms ease-in-out
 }
