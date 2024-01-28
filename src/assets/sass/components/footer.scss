@@ -37,6 +37,54 @@
   width: 44px;
   height: auto
 }
+
+.footer-list li {
+  margin-bottom: .5em
+}
+
+.button-footer {
+  display: inline-block;
+  position: relative;
+  padding: 1em 1.3em 0.9em;
+  background-color: var(--color-accent-1);
+  font-size: .95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer
+}
+
+.button-footer::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  border-radius: 28px;
+  background: #111;
+  transition: 0.4s cubic-bezier(.79,0,.07,.88);
+  z-index: -1
+}
+
+.button-footer span {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--color-heading);
+  transition: .4s cubic-bezier(.79,0,.07,.88)
+}
+
+.button-footer svg {
+  margin-left: 10px;
+  transform: rotate(45deg);
+  transition: .4s cubic-bezier(.79,0,.07,.88)
+}
+
+.button-footer svg path {
+  stroke: #111;
+  transition: .4s cubic-bezier(.79,0,.07,.88)
+}
+
 @media(min-width:767px) {
     .site-footer {
         z-index: 0
@@ -47,6 +95,19 @@
   .footer-card svg {
     width: 34px
   }
+  .button-footer:hover::before {
+    width: 100% 
+}
+
+.button-footer:hover span {
+    color: #111
+}
+.button-footer:hover svg {
+    transform: rotate(360deg)
+}
+.button-footer:hover svg path {
+    stroke: #fff
+}
 }
 
 
