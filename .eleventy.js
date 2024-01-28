@@ -26,8 +26,13 @@ module.exports = function(eleventyConfig) {
         });
     
         // Collections portfolio
-        eleventyConfig.addCollection('works', function(collectionApi) {
-        return collectionApi.getFilteredByGlob('src/content/realizacje/**/*.md').reverse();
+        eleventyConfig.addCollection('works', (collection) => {
+          const works = collection.getFilteredByGlob('src/content/realizacje/**/*.md').reverse();
+          return works.sort((a, b) => {
+            const orderA = a.data.order || 0; // Ustawiamy domyślną wartość na wypadek braku pola order
+            const orderB = b.data.order || 0;
+            return orderA - orderB;
+          });
         });
 
         // Collection faq
@@ -42,14 +47,14 @@ module.exports = function(eleventyConfig) {
           }
       
           let stats = await Image(src, {
-            widths: [25, 320, 640, 960, 1200, 1800, 2400],
+            widths: [25, 320, 640, 960, 1200, 1800 ],
             formats: ['jpeg', 'webp'],
             urlPath: '/assets/img/',
             outputDir: './public/assets/img/',
           });
       
           let lowestSrc = stats['jpeg'][0]; 
-          let largestSrc = stats['jpeg'][3];
+          let largestSrc = stats['jpeg'][1];
       
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
@@ -61,10 +66,11 @@ module.exports = function(eleventyConfig) {
             }),
             {},
           );
-      
+       
           const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
       
           const img = `<img
+            decoding="async"
             loading="lazy"
             alt="${alt}"
             src="${lowestSrc.url}"
@@ -72,8 +78,8 @@ module.exports = function(eleventyConfig) {
             srcset="${srcset['jpeg']}"
             width="${largestSrc.width}"
             height="${largestSrc.height}">`;
-
-          return `<div class="blur-load" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
+ 
+          return `<div class="image-wrapper blur-load" ><img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
         });
   
   
@@ -83,14 +89,14 @@ module.exports = function(eleventyConfig) {
           }
       
           let stats = await Image(src, {
-            widths: [25, 320, 640, 960, 1200, 1800, 2400],
+            widths: [25, 320, 640, 960, 1200, 1800 ],
             formats: ['jpeg', 'webp'],
             urlPath: '/content/blog/img/',
             outputDir: './public/content/blog/img/',
           });
       
           let lowestSrc = stats['jpeg'][0];
-          let largestSrc = stats['jpeg'][3];
+          let largestSrc = stats['jpeg'][2];
       
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
@@ -111,10 +117,10 @@ module.exports = function(eleventyConfig) {
             src="${lowestSrc.url}"
             sizes='(min-width: 1024px) 1024px, 100vw'
             srcset="${srcset['jpeg']}"
-            width="${largestSrc.width}"
-            height="${largestSrc.height}">`;
+            width="${lowestSrc.width}"
+            height="${lowestSrc.height}">`;
       
-            return `<div class="blur-load" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
+            return `<div class="image-wrapper blur-load"><img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
         });
   
 
@@ -122,16 +128,56 @@ module.exports = function(eleventyConfig) {
           if (!alt) {
             throw new Error(`Missing \`alt\` on myImage from: ${src}`);
           }
-      
+        
           let stats = await Image(src, {
-            widths: [25, 320, 640, 960, 1200, 1800, 2400],
+            widths: [25, 320, 640, 960, 1200, 1800 ],
             formats: ['jpeg', 'webp'],
             urlPath: '/content/realizacje/img/',
             outputDir: './public/content/realizacje/img/',
           });
       
           let lowestSrc = stats['jpeg'][0];
-          let largestSrc = stats['jpeg'][3];
+          let largestSrc = stats['jpeg'][2];
+      
+          const srcset = Object.keys(stats).reduce(
+            (acc, format) => ({
+              ...acc,
+              [format]: stats[format].reduce(
+                (_acc, curr) => `${_acc} ${curr.srcset} ,`,
+                '',
+              ),
+            }),
+            {},
+          ); 
+      
+          const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
+      
+          const img = `<img
+            loading="lazy"
+            alt="${alt}"
+            src="${lowestSrc.url}"
+            sizes='(min-width: 1024px) 1024px, 100vw'
+            srcset="${srcset['jpeg']}"
+            width="${lowestSrc.width}"
+            height="${lowestSrc.height}">`;
+      
+            return `<div class="image-wrapper blur-load"><img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
+        });
+        
+        eleventyConfig.addNunjucksAsyncShortcode('clientImage', async (src, alt) => {
+          if (!alt) {
+            throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+          }
+      
+          let stats = await Image(src, {
+            widths: [25, 320, 640, 960 ],
+            formats: ['jpeg', 'webp'],
+            urlPath: '/content/klienci/img/',
+            outputDir: './public/content/klienci/img/',
+          });
+      
+          let lowestSrc = stats['jpeg'][0];
+          let largestSrc = stats['jpeg'][1];
       
           const srcset = Object.keys(stats).reduce(
             (acc, format) => ({
@@ -151,13 +197,14 @@ module.exports = function(eleventyConfig) {
             alt="${alt}"
             src="${lowestSrc.url}"
             sizes='(min-width: 1024px) 1024px, 100vw'
-            srcset="${srcset['jpeg']}"
+            data-srcset="${srcset['jpeg']}"
             width="${largestSrc.width}"
-            height="${largestSrc.height}">`;
+            height="${largestSrc.height}"
+            class="swiper-lazy">`;
       
-            return `<div class="blur-load" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
+            return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
         });
-
+  
 
       // Code blocks
       eleventyConfig.addPlugin(codeStyleHooks, {

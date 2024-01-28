@@ -6,17 +6,24 @@
 }
   
 html.is-animating .transition-blur {
-  filter: blur(50px);
+  filter: blur(20px);
   opacity: 0
 }
 
 html.is-rendering .transition-blur {
-  filter: blur(50px);
+  filter: blur(20px);
   opacity: 0
 }
 
 .swup-progress-bar {
-    height: 3px;
-    background-color: var(--color-light-1);
+    height: 4px;
+    background-color: var(--color-accent-1);
     z-index: 999999
+  }
+
+  #users.is-changing {
+    transition: opacity 250ms;
+  }
+  #users.is-animating {
+    opacity: 0;
   }

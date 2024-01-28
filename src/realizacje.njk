@@ -1,0 +1,73 @@
+---
+layout: "layouts/base.njk"
+title: Wybrane realizacje
+description: 
+---
+
+<section class="pt-xsmall pb-large" data-scroll-section>
+    <div class="container">
+        {% for post in collections.works %}
+        <div class="works-grid-item">
+          <div class="row gx-5 flex-md-row-reverse pb-xsmall pb-md-medium align-items-center">
+            <div class="col-md-6">
+              <a href="{{ post.url }}" title="{{ post.data.title }}">
+                <div class="portfolio-item">
+                  <div class="parallax-wrap reveal reveal--top aspect_16-10">
+                    {% workImage "src/" + post.data.thumbnail, post.data.title %}
+                  </div>
+                </div>
+              </a>
+            </div>
+              <div class="col-md-6">
+                  <a href="{{ post.url }}" title="{{ post.data.client }}">
+                    <p class="split-lines color-accent-1 bold mt-4 mt-md-0 mb-2">
+                      {{ post.data.client }}
+                    </p>
+                  </a>
+                  <a href="{{ post.url }}" title="{{ post.data.title }}">
+                    <h3 class="archive-post-title split-lines h3 my-3">
+                      {{ post.data.title }}
+                    </h3>
+                  </a>
+                    <p class="line-clamp-3 split-lines mt-4 mb-4">
+                      {{ post.data.description }}
+                    </p>
+                  <a
+                    href="{{ post.url }}"
+                    title="Zobacz więcej"
+                    class="button magnetic fade-in mt-1 mb-2"
+                    data-strength="100"
+                    data-strength-text="50"
+                  >
+                    <span>Zobacz więcej</span>
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13 1L1 13"
+                        stroke="var(--color-accent-1)"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M3 1H13V11"
+                        stroke="var(--color-accent-1)"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </a>
+              </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+  </section>
+  
+

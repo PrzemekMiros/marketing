@@ -1,6 +1,6 @@
 ---
 layout: layouts/blog.njk
-title: Artykuły
+title: Porady i ciekawostki
 description: Porady i ciekawostki dotyczące tworzenia stron, pozycjonowania i digital marketingu. 
 pagination: 
     data: collections.posts
@@ -8,37 +8,19 @@ pagination:
     alias: blog
 ---
 
-<div class="col-md-10 mx-auto">
-  <div class="row gx-4 mb-3 mb-md-0">
-    <div class="col-md-10">
-      <h1 class="xxl split-text-lines">
-        {{ title }}<span class="dot">.</span>
-      </h1>
-    </div>
-    <div class="col-md-2 d-none d-lg-flex align-items-end pb-small fadeIn">
-      <svg width="87" height="152" viewBox="0 0 127 192" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M63.5 1L63.5 191" stroke="var(--color-dark-1)" stroke-width="3" stroke-linecap="round"/>
-        <path d="M126 128.5L63.5 191" stroke="var(--color-dark-1)" stroke-width="3" stroke-linecap="round"/>
-        <path d="M1 128.5L63.5 191" stroke="var(--color-dark-1)" stroke-width="3" stroke-linecap="round"/>
-        </svg>            
-    </div>
-  </div>
-
-<div class="pb-small">
-    <div class="line-x lx-2"></div>
-</div>
- 
+<section class="pt-xsmall pb-large" data-scroll-section>
+  <div class="container">
       <div class="row gx-4"> 
         {% for post in blog %} 
         <div class="col-md-4 pb-medium"> 
             <a href="{{ post.url }}" title="{{ post.data.title }}">
-                        <div class="portfolio-item fadeIn">
+                        <div class="portfolio-item fade-in">
                                 <div class="parallax-wrap aspect_16-9">
                                   {% blogImage "src/" + post.data.thumbnail, post.data.title %}
                                 </div>
                         </div>
                         </a>
-                        <p class="archive-category fadeIn">
+                        <p class="archive-category my-2 fade-in">
                             <small>
                                 {{ post.data.tags }}
                             </small>
@@ -48,7 +30,7 @@ pagination:
                                 {{ post.data.title }}
                             </h3>
                         </a>
-                        <a href="{{ post.url }}" title="Czytaj" class="button magnetic fadeIn mt-3 mb-4" data-strength="100" data-strength-text="50">
+                        <a href="{{ post.url }}" title="Czytaj" class="button magnetic fade-in mt-3 mb-4" data-strength="100" data-strength-text="50">
                             <span>Czytaj</span>
                             <svg width="11" height="11" viewBox="0 0 14 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -63,12 +45,14 @@ pagination:
       {% endfor %} 
     </div>
       <div class="row gx-4">
-</div>
+
         <div class="col-md-6">
           <nav>
-            <ul class="pagination d-flex fadeIn"> {%- for pageEntry in pagination.pages %} 
+            <ul class="pagination d-flex fade-in"> {%- for pageEntry in pagination.pages %} 
               <li class="pagination-item">
                 <a class="pagination-link" title="Paginacja" href="{{ pagination.hrefs[ loop.index0 ] }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="active" {% endif %}>{{ loop.index }}</a>
               </li> {%- endfor %} </ul>
           </nav>
         </div>
+      </div>
+    </section>

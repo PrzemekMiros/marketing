@@ -1,0 +1,33 @@
+
+.step-card {
+    margin-bottom: 3em
+}
+.step-card-num {
+    position: relative;
+    font-size: clamp(65px, 5vw, 90px);
+    font-weight: 700;
+    color: var(--color-light-2);
+}
+
+.step-card-border {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--color-accent-1);
+    transform: translateX(-50%) translateY(-50%)
+}
+
+@media(min-width:767px) {
+    .step-card-num:not(:last-child)::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        width: calc(100% + 20px);
+        height: 2px;
+        background-color: var(--color-light-2)
+    }
+}

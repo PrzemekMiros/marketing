@@ -72,12 +72,13 @@ function animationMain() {
   }
 
   // Fade in
-  const fadeIn = gsap.utils.toArray(".fadeIn");
+  const fadeIn = gsap.utils.toArray(".fade-in");
   fadeIn.forEach((fadeInItem) => {
     gsap.from(fadeInItem, {
+      autoAlpha: 0,
       opacity: 0,
       y: 20,
-      duration: 1,
+      duration: 1.3,
       scrollTrigger: {
         scroller: ".scrollContainer",
         trigger: fadeInItem,
@@ -91,7 +92,7 @@ function animationMain() {
   lineX.forEach((lineXItem) => {
     gsap.from(lineXItem, {
       width: "0",
-      duration: 0.7,
+      duration: 1,
       ease: Power2.easeInOut,
       scrollTrigger: {
         scroller: ".scrollContainer",
@@ -149,6 +150,63 @@ function animationMain() {
     });
   };
 
+     // Nav menu
+     const menuToggle = document.getElementById("menuToggle");
+     const menuBar = gsap.timeline();
+     var tl = gsap.timeline({ paused: true});
+     tl.to('.fullpage-menu', {
+         duration: 0,
+         display: "block",
+         ease: 'Expo.easeInOut',
+     });
+     tl.from('.menu-bg', {
+         duration: .8,
+         opacity: 0,
+         ease: 'Expo.easeInOut'
+     });
+     tl.from('.main-menu li a', {
+         duration: 1.3,
+         y:"110%",
+         stagger: 0.1,
+         ease: 'Expo.easeInOut'
+     }, "-=0.6");
+     tl.from('.line-xh', {
+      duration: 1,
+      stagger: .1,
+      width: "0",
+      ease: 'Expo.easeInOut'
+     }, "-=1.3");
+     tl.reverse();
+     menuToggle.addEventListener('click', function(){
+         menuBar.reversed(!menuBar.reversed());
+         tl.reversed(!tl.reversed());
+       // menuWrap.classList.toggle("active");
+     });
+
+  // Loop text
+  const rows = document.querySelectorAll(".loop-text-row");
+
+rows.forEach(function (e, i) {
+	let row_width = e.getBoundingClientRect().width;
+	let row_item_width = e.children[0].getBoundingClientRect().width;
+	let initial_offset = ((2 * row_item_width) / row_width) * 100 * -1;
+	let x_translation = initial_offset * -1;
+	// console.log(x_translation);
+
+	gsap.set(e, {
+		xPercent: `${initial_offset}`
+	});
+
+	let duration = 40 * (i + 1);
+
+	gsap.to(e, {
+		ease: "none",
+		duration: duration,
+		xPercent: 0,
+		repeat: -1
+	});
+});
+
   // Magnetic
   if (document.querySelector(".magnetic")) {
     var magnets = document.querySelectorAll(".magnetic");
@@ -203,56 +261,6 @@ function animationMain() {
     }
   }
 
-  // Nav menu
-  const menuToggle = document.getElementById("menuToggle");
-  const menuBar = gsap.timeline();
-  var tl = gsap.timeline({ paused: true });
-  tl.to(".fullpage-menu", {
-    duration: 0,
-    display: "block",
-    ease: "Expo.easeInOut",
-  });
-  tl.from(".menu-bg", {
-    duration: 0.8,
-    opacity: 0,
-    ease: "Expo.easeInOut",
-  });
-  tl.from(
-    ".main-menu li a",
-    {
-      duration: 1.3,
-      y: "110%",
-      stagger: 0.1,
-      ease: "Expo.easeInOut",
-    },
-    "-=0.6"
-  );
-  tl.from(
-    ".nav-info",
-    {
-      duration: 0.6,
-      opacity: 0,
-      y: 20,
-      ease: Power3,
-    },
-    "-=0.8"
-  );
-  tl.from(
-    ".h-line-y",
-    {
-      duration: 1,
-      height: "0",
-      ease: "Expo.easeInOut",
-    },
-    "-=1.3"
-  );
-  tl.reverse();
-  menuToggle.addEventListener("click", function () {
-    menuBar.reversed(!menuBar.reversed());
-    tl.reversed(!tl.reversed());
-    // menuWrap.classList.toggle("active");
-  });
-
   // Greeting
   if (document.querySelector("#greeting")) {
     const greeting = document.getElementById("greeting");
@@ -267,7 +275,8 @@ function animationMain() {
   // parallax
   if (window.matchMedia("(min-width: 767px)").matches) {
     gsap.utils.toArray(".parallax-wrap").forEach(function (container) {
-      let image = container.querySelector("img");
+      let image = container.querySelector("picture img");
+      gsap.set(".parallax-wrap", {overflow: "hidden"});
 
       let tl = gsap.timeline({
         scrollTrigger: {
@@ -352,13 +361,33 @@ function animationMain() {
   }
   imageReveal();
 
+  // Circle image
+  const rotateImages = document.querySelectorAll('.center-rotate-image');
+const hoverColumns = document.querySelectorAll('.hover-col');
+
+hoverColumns.forEach((hoverCol, index) => {
+  hoverCol.addEventListener("mouseenter", () => {
+
+    hoverColumns.forEach((col) => {
+      col.classList.remove("active");
+    });
+
+    rotateImages.forEach((img) => {
+      img.classList.remove("active");
+    });
+
+    hoverCol.classList.add("active");
+    rotateImages[index].classList.add("active");
+  });
+});
+
   // End animation
 }
 
 function addMenuClass() {
   MenuClass = document.querySelector("body");
   MenuToggle = document.querySelector(".menu-toggle");
-  MenuToggle.addEventListener("click", () => {
+  MenuToggle.addEventListener('click', () => {
     MenuClass.classList.toggle("menu-open");
   });
 }

@@ -1,0 +1,20 @@
+.loop-text-row {
+	display: flex;
+	position: relative;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.loop-text-item {
+	position: relative;
+	line-height: 100%;
+	font-size: clamp(58px, 8vw, 130px);
+    color: var(--color-light-1);
+    font-weight: 600;
+	/*
+	filter: drop-shadow(0 0 1px var(--color-dark-1)) drop-shadow(-1px -1px 0 var(--color-dark-1))  drop-shadow(1px -1px 0 var(--color-dark-1)) drop-shadow(-1px 1px 0 var(--color-dark-1)) drop-shadow(1px 1px 0 var(--color-dark-1));
+    */
+	text-shadow: 0 0 1px var(--color-dark-1), -1px -1px 0 var(--color-dark-1), 1px -1px 0 var(--color-dark-1), -1px 1px 0 var(--color-dark-1), 1px 1px 0 var(--color-dark-1);
+
+	opacity: .25
+}

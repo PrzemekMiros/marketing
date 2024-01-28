@@ -1,9 +1,6 @@
 {% include "partials/header.njk" %}
+{% include "templates/hero-page.njk" %}
 
-<section class="pt-large pb-large" data-scroll-section>
-    <div class="container">
-       {{ content | safe}}
-    </div>
-</section>
+{{ content | safe}}
 
 {% include "partials/footer.njk" %}

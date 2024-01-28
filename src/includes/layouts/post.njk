@@ -5,7 +5,7 @@
 
             <div class="offset-md-3 col-md-6">
                 <div class="single-post-title-wrap pb-xsmall pb-md-small">
-                    <div class="breacrumbs fadeIn">
+                    <div class="breadcrumbs small fade-in">
                         <a href="/" title="Strona główna">
                             Główna
                         </a>
@@ -25,7 +25,7 @@
                     <h1 class="single-post-title split-text-lines mt-4 mb-4">
                         {{ title }}
                     </h1>
-                    <div class="breacrumbs fadeIn">
+                    <div class="breadcrumbs small fade-in">
                         <span>
                             Kategoria:
                         </span>
@@ -46,18 +46,18 @@
             </div>
 
             <div class="offset-md-1 col-md-10">
-                <div class="parallax-wrap aspect_16-9 fadeIn mb-4 mb-lg-5">
+                <div class="parallax-wrap aspect_16-9 fade-in mb-4 mb-lg-5">
                      {% blogImage "src/" + thumbnail, title, "single-post-image img-fluid" %}
                 </div>
             </div>
 
-        <div class="content row gx-5 fadeIn" id="pinShare">
+        <div class="content row gx-0 fade-in" id="pinShare">
             <div class="offset-md-3 col-md-6">
                 {{ content | safe}}
             </div>
         </div>
 
-        <div class="pt-medium fadeIn">
+        <div class="pt-medium fade-in">
             <div class="line-x"></div>
         </div>
 
@@ -68,7 +68,7 @@
                     {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
                     {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
                     {%- if nextPost or previousPost %}
-                    <ul class="d-flex flex-wrap fadeIn">
+                    <ul class="d-flex flex-wrap fade-in">
                         {%- if previousPost %}
                         <li class="col-md-6 prev d-none d-md-block">
                             <p class="mb-4">
@@ -77,7 +77,7 @@
                                 </small>
                             </p>
                             <a href="{{ previousPost.url | url }}" title="{{ previousPost.data.client }}"
-                                class="h2">{{ previousPost.data.title }}
+                                class="h3">{{ previousPost.data.title }}
                             </a>
                         </li>
                         {% endif %}
@@ -89,7 +89,7 @@
                                 </small>
                             </p>
                             <a href="{{ nextPost.url | url }}" title="{{ nextPost.data.client }}"
-                                class="h2">{{ nextPost.data.title }}
+                                class="h3">{{ nextPost.data.title }}
                             </a>
                         </li>
                         {% endif %}

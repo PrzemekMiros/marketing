@@ -1,0 +1,38 @@
+<section class="faq">
+    <div class="container" data-scroll-section id="faq-sidebar">
+      <div class="row gx-5">
+        <div class="col-md-8">
+          <h2 class="split-lines mt-0 mb-5">
+            Często zadawane pytania
+          </h2>
+          <div class="accordion-wrap"> 
+            <div class="line-x lx-op d-md-none mt-5 mt-md-0"></div>
+            {% for post in collections.faq %}
+            <div class="">
+              <button class="accordion mt-4 pt-xxsmall pb-xxsmall">
+                <span class="h4 title my-0 split-lines">
+                  {{ post.data.title }}
+                </span>
+                <span class="icon fade-in"></span>
+              </button>
+              <div class="panel col-md-11">
+                <p>
+                  {{ post.data.answer }}
+                </p>
+              </div>
+            </div>
+            <div class="line-x lx-op mt-4"></div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col-md-4 d-none d-md-block">
+          <div class="sidebar bg-light pt-xlarge" data-scroll data-scroll-sticky data-scroll-target="#faq-sidebar">
+            <div class="pt-xlarge pb-xlarge">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </section> 
+  

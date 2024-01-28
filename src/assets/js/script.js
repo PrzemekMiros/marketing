@@ -1,5 +1,5 @@
 function appMain() {
-
+/*
 const changeTheme = document.querySelector(".change-theme");
 let theme = localStorage.getItem("theme");
 changeTheme.addEventListener('click', () => {
@@ -20,26 +20,23 @@ if (theme === "dark") {
 if (theme === "light") {
     document.querySelector("html").classList.add("light");
 };
+*/
 
-// Lazy blur images
-const blurImgWrap = document.querySelectorAll(".blur-load");
-
-blurImgWrap.forEach(item => {
-   const img = item.querySelector("img");
-
-   function loaded() {
-      item.classList.add("loaded");
-   }
-
-   if (img.complete) {
-      loaded();
-   } else {
-      img.addEventListener("load", loaded);
-   }
-   
-});
-
-
+  // Lazy blur images
+  if (document.querySelector(".blur-load")) {
+    const blurImgWrap = document.querySelectorAll(".blur-load");
+    blurImgWrap.forEach((item) => {
+      const img = item.querySelector("picture img");
+      function loaded() {
+        item.classList.add("loaded");
+      }
+      if (img.complete) {
+        loaded();
+      } else {
+        img.addEventListener("load", loaded);
+      }
+    });
+  }
 
 if (document.querySelector('.swiper')) {
   var swiper = new Swiper(".swiper", {

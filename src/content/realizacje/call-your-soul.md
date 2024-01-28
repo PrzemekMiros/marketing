@@ -9,8 +9,10 @@ imageMain: /content/realizacje/img/soul-thumb-big.jpg
 imageMobile: /content/realizacje/img/soul-mobile.jpg
 imageGridOne: /content/realizacje/img/soul-1.jpg
 imageGridTwo: /content/realizacje/img/soul-2.jpg
-category: ['Strona internetowa']
+category: 
+  - Strona internetowa
 link: https://callyoursoul.pl/
+order: 7
 ---
 
 ## Studio masażu i terapii

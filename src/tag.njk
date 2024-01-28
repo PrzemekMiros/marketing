@@ -16,7 +16,7 @@ eleventyComputed:
       {{ tag }}<span class="dot">.</span>
     </h1>
   </div>
-  <div class="col-md-2 d-none d-lg-flex align-items-end pb-small fadeIn">
+  <div class="col-md-2 d-none d-lg-flex align-items-end pb-small fade-in">
     <svg
       width="87"
       height="152"
@@ -57,7 +57,7 @@ eleventyComputed:
     {% for post in collections[tag] %}
     <div class="col-md-4 pb-medium">
       <a href="{{ post.url }}" title="{{ post.data.title }}">
-        <div class="portfolio-item fadeIn">
+        <div class="portfolio-item fade-in">
           <div class="parallax-wrap aspect_16-9">
             <img
               src="{{ post.data.thumbnail }}"
@@ -67,7 +67,7 @@ eleventyComputed:
           </div>
         </div>
       </a>
-      <p class="archive-category fadeIn">
+      <p class="archive-category fade-in">
         <small>
           {{ post.data.tags }}
         </small>
@@ -80,7 +80,7 @@ eleventyComputed:
       <a
         href="{{ post.url }}"
         title="Czytaj"
-        class="button magnetic fadeIn mt-3 mb-4"
+        class="button magnetic fade-in mt-3 mb-4"
         data-strength="100"
         data-strength-text="50"
       >

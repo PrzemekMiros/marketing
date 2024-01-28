@@ -1,0 +1,27 @@
+<section class="works pb-xsmall" data-scroll-section>
+  <div class="container">
+      <!--
+      <div class="pb-xsmall text-center">
+        <h2 class="h1 split-lines">
+         Wybrane <span class="text-border"> realizacje</span>
+        </h2>
+        <p>
+          Zobacz wybrane realizacje stron internetowych
+        </p>
+      </div>
+      -->
+      {% for post in collections.works.slice(0, 3) %}
+      <div class="works-grid-item">
+        <div class="pb-small pb-md-medium">
+            <a href="{{ post.url }}" title="{{ post.data.title }}">
+              <div class="portfolio-item">
+                <div class="parallax-wrap reveal reveal--top aspect_16-7">
+                  {% workImage "src/" + post.data.thumbnail, post.data.title %}
+                </div>
+              </div>
+            </a>
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+</section>

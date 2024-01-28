@@ -6,8 +6,10 @@
     font-size: 1rem;
     font-weight: 500;
     border: none;
+    border-radius: 28px;
     cursor: pointer
 }
+
 .button::before {
     position: absolute;
     content: "";
@@ -20,24 +22,29 @@
     transition: 0.4s cubic-bezier(.79,0,.07,.88);
     z-index: -1
 }
+
 .button span {
     display: inline-block;
     font-weight: 500;
     color: var(--color-heading);
     transition: .4s cubic-bezier(.79,0,.07,.88)
 }
+
 .button svg {
     margin-left: 25px;
     transform: rotate(45deg);
     transition: .4s cubic-bezier(.79,0,.07,.88)
 }
+
 .button svg path {
     stroke: var(--color-accent-1);
     transition: .4s cubic-bezier(.79,0,.07,.88)
 }
+
 .magnetic {
     display: inline-block
 }
+
 .button-big {
     padding: 1em 0;
     width: 100%;
@@ -56,6 +63,7 @@
     .button:hover::before {
         width: calc(100% + 1em)
     }
+    
     .button:hover span {
         color: var(--color-light-2);
         transform: translateX(20px)

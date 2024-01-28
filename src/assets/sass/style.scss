@@ -8,9 +8,16 @@
 @use 'base/typography.scss';
  
 @use 'components/header.scss';
-@use 'components/hero.scss';
 @use 'components/button.scss';
 @use 'components/lines.scss';
+@use 'components/hero.scss';
+@use 'components/motto.scss';
+@use 'components/looptext.scss';
+@use 'components/services.scss';
+@use 'components/faq.scss';
+@use 'components/steps.scss';
+@use 'components/circle.scss';
+@use 'components/brief.scss';
 @use 'components/footer.scss';
 
 @use 'syntax/prism-nord.scss'; 
