@@ -28,19 +28,28 @@
 
 .desktop-nav ul {
   margin-top: 0;
-  margin-bottom: 0;
-  text-align: center
+  margin-bottom: 0
 }
 
 .desktop-nav ul li {
-  display: inline-block;
-  margin-bottom: 0
+  margin-bottom: 0;
+  line-height: 1.4;
 }
 
 .desktop-nav ul li a {
   color: var(--color-heading);
   font-size: clamp(16px, 1vw, 17px);
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.desktop-nav ul li span {
+  display: block;
+  margin-top: .2em;
+  font-size: 70%;
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: default
 }
 
 .button-header {
@@ -57,12 +66,12 @@
 .button-header::before {
   position: absolute;
   content: "";
-  top: 0;
-  bottom: 0;
-  right: 0;
+  top: -1px;
+  bottom: -1px;
+  right: -1px;
   width: 0;
   border-radius: 28px;
-  background: var(--color-dark-1);
+  background: #111;
   transition: 0.4s cubic-bezier(.79,0,.07,.88);
   z-index: -1
 }
@@ -236,7 +245,7 @@
 
 @media(min-width:767px) {
 .button-header:hover::before {
-    width: 100%
+    width: 102%
 }
 .button-header:hover span {
    color: #fff

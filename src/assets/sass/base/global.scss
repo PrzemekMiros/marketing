@@ -3,7 +3,7 @@
 }
 
 body {
-  margin: 10px;
+  margin: 8px;
   padding: 0;
   height: 100%;
   text-rendering: optimizeLegibility;
@@ -20,7 +20,7 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;  
-  border: 11px solid var(--color-dark-1);
+  border: 8px solid var(--color-dark-1);
   pointer-events: none;
   z-index: 999
 }
