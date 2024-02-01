@@ -1,0 +1,41 @@
+.google-logo {
+    margin-top: 1em;
+}
+
+.google-logo svg {
+    max-width: 100px;
+}
+
+.opinion-item {
+    padding: 2em;
+    background: var(--color-light-2)
+}
+
+.opinion-header {
+    display: flex;
+    align-items: center
+}
+
+.opinion-avatar {
+    margin-right: 1em
+}
+
+.opinion-avatar img {
+    width: 44px
+}
+
+.opinion-date {
+    font-size: 75%
+}
+
+.opinion-rating {
+    margin-top: .5em
+}
+
+.opinion-rating img {
+    width: 100px
+}
+
+.opinion-content p {
+    font-size: 90%
+}
