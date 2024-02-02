@@ -4,6 +4,47 @@ title: Wycena
 description: Wypełnij krótki brief żeby otrzymać bezpłatną wycenę. Dobry plan jest kluczem do udanego projektu.
 ---
 
-<section class="section-brief" data-scroll-section>
-          <iframe class="brief" allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" src="https://my.forms.app/form/61b7b5f50dcc8e38c79a5143" frameborder="0"></iframe>
+<section class="brief" data-scroll-section>
+    <div class="container">
+       <div class="multiform offset-md-3 col-md-6 pt-xlarge pb-xlarge">
+        <div class="tab-status">
+            <span class="tab active">1</span>
+            <span class="tab">2</span>
+            <span class="tab">3</span>
+            <span class="tab">4</span>
+          </div>
+          <form action="https://formsubmit.io/send/kontakt@futurewebstudio.pl" method="POST">
+            <div role="tab-list" class="tab-list">
+              <div role="tabpanel" id="color" class="tabpanel">
+                <h3>Pytanie nr 1</h3>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                      <input type="text" name="Pytanie 1" class="form-input" placeholder="Ruby red">
+                  </div>
+                  <div class="col-md-6">
+                      <input type="text" name="Pytanie 2" class="form-input" placeholder="Ruby red">
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" id="hobbies" class="tabpanel hidden">
+                <h3>Pytanie nr 2</h3>
+                <textarea name="hobbies" class="form-input" placeholder="Mountain climbing, Guitar, Skateboarding"></textarea>
+              </div>
+              <div role="tabpanel" id="hobbies" class="tabpanel hidden">
+                <h3>Pytanie nr 3</h3>
+                <textarea name="hobbies" class="form-input" placeholder="Mountain climbing, Guitar, Skateboarding"></textarea>
+              </div>
+              <div role="tabpanel" id="occupation" class="tabpanel hidden">
+                <h3>Pytanie nr 4</h3>
+                <textarea name="occupation" class="form-input" placeholder="Web Designer"></textarea>
+              </div>
+            </div>
+              <div class="pagination">
+                <a class="btn hidden" id="prev">Poprzednie</a>
+                <a class="btn" id="next">Kolejne</a>
+                <button class="btn btn-submit hidden" id="submit">Wyślij</button>
+              </div>
+          </form>
+       </div>
+    </div>
 </section> 
