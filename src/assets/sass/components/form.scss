@@ -104,6 +104,7 @@
   font-size: .95rem;
   line-height: 1.4;
   cursor: pointer;
+  transition: ease-in-out .3s all
 }
 
 .btn[disabled] {
@@ -112,9 +113,8 @@
 }
 
 .btn:hover {
-  background: var(--color-accent-2);
-  color: #fff;
-  transition: ease-in-out .3s all;
+  background: var(--color-dark-1);
+  color: var(--color-light-1)
 }
 
 .btn-submit {
@@ -122,11 +122,12 @@
 }
 
 .btn-submit:hover {
-  background-color: var(--color-accent-2)
+  background: var(--color-dark-1);
+  color: var(--color-light-1)
 }
 
 .pagination {
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex
 }
 
@@ -139,6 +140,7 @@
 .tab-status {
   display: flex;
   align-items: center;
+  margin-bottom: 1.5em
 }
 
 .tab-status span {
