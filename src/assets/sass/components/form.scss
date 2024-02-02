@@ -34,7 +34,7 @@
     font-weight: 400;
     left: 5px;
     padding: .7em;
-      top: 2em;
+      top: 1.9em;
       transform: translateY(-50%);
     transition: .2s;
     -moz-transition: .2s;
@@ -75,18 +75,6 @@
     opacity: .5
     }
     
-    form .wa-button {
-        width: auto;
-        display: inline-block;
-        padding: .9em 2.3em;
-        background: var(--color-accent-1);
-        color: #111;
-        border-radius: 45px;
-        font-family: var(--font-primary);
-        font-size: .95rem;
-        cursor: pointer;
-        border: none
-    }
     
     .contact-list {
         margin-top: 0
@@ -97,38 +85,6 @@
     }
 
 
-
-
-
-  
-.form-input {
-  width: 100%;
-  border: 1px solid var(--color-border);
-  border-radius: .5rem;
-  padding: 1rem;
-  box-sizing: border-box;
-  color: var(--text-color);
-  transition: ease-in-out .3s all;
-}
-
-.form-input::placeholder {
-  color: var(--color-text)
-}
-
-.form-input:focus {
-  outline: none;
-  border-color: var(--color-border);
-}
-
-.btn:focus-within,
-.form-input:focus-within {
-  border: 1px solid var(--color-accent-1);;
-  outline: none
-}
-
-textarea.form-input {
-  min-height: 150px;
-}
 
 .btn {
   border: 0;
@@ -147,7 +103,7 @@ textarea.form-input {
 }
 
 .btn:hover {
-  background: #111;
+  background: var(--color-accent-2);
   color: #fff;
   transition: ease-in-out .3s all;
 }
@@ -157,7 +113,7 @@ textarea.form-input {
 }
 
 .btn-submit:hover {
-  background-color: var(--color-accent-1)
+  background-color: var(--color-accent-2)
 }
 
 .pagination {
@@ -201,3 +157,43 @@ textarea.form-input {
   display: none;
 }
 
+
+
+
+input[type=checkbox] + label {
+    display: block;
+    margin: 0.2em;
+    cursor: pointer;
+    padding: 0.2em;
+  }
+  
+  input[type=checkbox] {
+    display: none;
+  }
+  
+  input[type=checkbox] + label:before {
+    content: "✔";
+    border: 0.1em solid var(--color-dark-2);
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    padding-left: 0.3em;
+    padding-bottom: 0.3em;
+    margin-right: 0.5em;
+    vertical-align: bottom;
+    color: transparent;
+    transition: 0.2s;
+    transform: translateY(-2px)
+  }
+  
+  input[type=checkbox] + label:active:before {
+    transform: scale(0);
+  }
+  
+  input[type=checkbox]:checked + label:before {
+    background-color: var(--color-accent-1);
+    border-color: var(--color-accent-1);
+    color: var(--color-light-1)
+  }
+  

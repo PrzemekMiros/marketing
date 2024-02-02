@@ -1,17 +1,7 @@
 </div>
-<section class="works reveal-img">
-  <div id="gallery-work" class="d-none d-md-block">
-    <div id="work-images">
-      {% for post in collections.works.slice(0, 5) %}
-        <div class="work-image" style="background-image: url('{{ post.data.thumbnail }}');"></div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
 </div>
 <!-- Scripts -->
 <script src="/assets/js/vendor.js"></script>
-
 <script src="/assets/js/animations.js"></script>
 <script src="/assets/js/script.js"></script>
 <script>
@@ -24,7 +14,6 @@
     lerp: .1,
     touchMultiplier: 4,
   });
-
   // Swup init
   const swup = new Swup({
     animateHistoryBrowsing: true,
@@ -40,9 +29,7 @@
   document.addEventListener("swup:animationInDone", () => {
     appMain(); animationMain()
   }), console.clear();
-</script>
 
-<script>
 window.addEventListener('load', function(){
   appMain(); animationMain()
   });

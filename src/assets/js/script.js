@@ -203,7 +203,7 @@ function validateEntry() {
 }
 
 function setButtonPermissions(input) {
-  if (input.classList.contains(required)) {
+  if (isEmpty(input.value) && input.classList.contains('required') ) { 
     nextButton.setAttribute('disabled', true)
     submitButton.setAttribute('disabled', true)
   } else {

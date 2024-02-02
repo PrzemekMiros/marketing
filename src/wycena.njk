@@ -21,34 +21,110 @@ description: Wypełnij krótki brief żeby otrzymać bezpłatną wycenę. Dobry 
             <input type="hidden" name="_subject" value="Wycena strony">
 
             <div role="tab-list" class="tab-list">
+
               <div role="tabpanel" id="color" class="tabpanel">
                 <h3>Dane kontaktowe</h3>
                 <div class="row g-3">
                   <div class="col-md-6">
-                      <input type="text" name="Imie i nazwisko" class="form-input" placeholder="Imię i nazwisko">
+                    <div class="floating-label">
+                        <input class="form-input floating-input required" type="text" name="Imie i nazwisko" placeholder="">
+                        <span class="highlight"></span>
+                        <label>Imię i nazwisko</label>
+                    </div>
                   </div>
                   <div class="col-md-6">
-                      <input type="text" name="Adres email" class="form-input" placeholder="Adres email">
+                    <div class="floating-label">
+                        <input type="text" name="Adres email" class="form-input floating-input required" placeholder="">
+                        <span class="highlight"></span>
+                        <label>Adres email</label>
+                    </div>                 
                   </div>
                   <div class="col-md-6">
-                    <input type="text" name="Numer telefonu" class="form-input" placeholder="Numer telefonu">
+                    <div class="floating-label">
+                        <input type="text" name="Numer telefonu" class="form-input floating-input" placeholder="">
+                        <span class="highlight"></span>
+                        <label>Numer telefonu</label>
+                    </div> 
                 </div>
                 <div class="col-md-6">
-                    <input type="text" name="Nazwa firmy" class="form-input" placeholder="Nazwa firmy">
+                    <div class="floating-label">
+                        <input type="text" name="Nazwa firmy" class="form-input floating-input required" placeholder="">
+                        <span class="highlight"></span>
+                        <label>Nazwa firmy</label>
+                    </div>
                 </div>
                 </div>
               </div>
+
               <div role="tabpanel" id="hobbies" class="tabpanel hidden">
                 <h3>Materiały</h3>
-                <textarea name="hobbies" class="form-input" placeholder="Mountain climbing, Guitar, Skateboarding"></textarea>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="checkbox" id="check1" name="Logo" class="form-input required">
+                        <label for="check1">Logo</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="checkbox" id="check2" name="Opisy" class="form-input required">
+                        <label for="check2">Opisy</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="checkbox" id="check3" name="Zdjęcia" class="form-input required">
+                        <label for="check3">Zdjęcia</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="checkbox" id="check4" name="Zdjęcia" class="form-input required">
+                        <label for="check4">Zdjęcia</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="checkbox" id="check5" name="Domena" class="form-input required">
+                        <label for="check5">Domena</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="checkbox" id="check6" name="Hosting" class="form-input required">
+                        <label for="check6">Hosting</label>
+                    </div>
+                </div>
               </div>
               <div role="tabpanel" id="hobbies" class="tabpanel hidden">
-                <h3>Pytanie nr 3</h3>
-                <textarea name="hobbies" class="form-input" placeholder="Mountain climbing, Guitar, Skateboarding"></textarea>
+                <h3>Dane techniczne</h3>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                      <div class="floating-label">
+                          <input class="form-input floating-input required" type="text" name="Strona 1" placeholder="">
+                          <span class="highlight"></span>
+                          <label>Strona 1</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="floating-label">
+                          <input type="text" name="Strona 2" class="form-input floating-input required" placeholder="">
+                          <span class="highlight"></span>
+                          <label>Strona 2</label>
+                      </div>                 
+                    </div>
+                    <div class="col-md-6">
+                      <div class="floating-label">
+                          <input type="text" name="Strona 3" class="form-input floating-input" placeholder="">
+                          <span class="highlight"></span>
+                          <label>Strona 3</label>
+                      </div> 
+                  </div>
+                  <div class="col-md-6">
+                      <div class="floating-label">
+                          <input type="text" name="Strona 4" class="form-input floating-input required" placeholder="">
+                          <span class="highlight"></span>
+                          <label>Strona 4</label>
+                      </div>
+                  </div>
+                  </div>
               </div>
               <div role="tabpanel" id="occupation" class="tabpanel hidden">
-                <h3>Pytanie nr 4</h3>
-                <textarea name="occupation" class="form-input" placeholder="Web Designer"></textarea>
+                <h3>Dodatkowe informacje</h3>
+                <div class="floating-label">
+                    <textarea class="form-input floating-input floating-textarea" name="Dodatkowe informacje" placeholder=" "></textarea>
+                    <span class="highlight"></span>
+                    <label>Wiadomość</label>
+                </div>
               </div>
             </div>
               <div class="pagination">
