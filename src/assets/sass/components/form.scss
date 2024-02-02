@@ -84,6 +84,15 @@
         margin-bottom: .5em
     }
 
+    .contact-list li a {
+        display: flex;
+        align-items: center
+    }
+
+    .contact-list li a svg {
+        margin-right: 1em
+    }
+
 
 
 .btn {
@@ -118,9 +127,7 @@
 
 .pagination {
   margin-top: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex
 }
 
 .pagination .btn {

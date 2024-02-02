@@ -86,6 +86,15 @@ video {
   aspect-ratio: 16/7;
 }
 
+.parallax-wrap .image-wrapper {
+  height: 100%
+}
+
+.parallax-wrap picture img {
+  height: 100%;
+  object-fit: cover
+}
+
 a {
   text-decoration: none;
   color: inherit;
