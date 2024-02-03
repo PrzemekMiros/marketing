@@ -9,16 +9,16 @@ description:
         {% for post in collections.works %}
         <div class="works-grid-item">
           <div class="row gx-5 flex-md-row-reverse pb-small pb-md-medium align-items-center">
-            <div class="offset-md-1 col-md-6">
+            <div class="col-md-9">
               <a href="{{ post.url }}" title="{{ post.data.title }}">
                 <div class="portfolio-item">
-                  <div class="parallax-wrap reveal reveal--top aspect_16-13">
+                  <div class="parallax-wrap reveal reveal--top aspect_16-7">
                     {% workImage "src/" + post.data.thumbnail, post.data.title %}
                   </div>
                 </div>
               </a>
             </div>
-              <div class="col-md-5">
+              <div class="col-md-3">
                   <a href="{{ post.url }}" title="{{ post.data.client }}">
                     <p class="split-lines color-accent-1 bold mt-4 mt-md-0 mb-2">
                       {{ post.data.client }}
@@ -29,9 +29,6 @@ description:
                       {{ post.data.title }}
                     </h3>
                   </a>
-                    <p class="line-clamp-3 split-lines mt-4 mb-4">
-                      {{ post.data.description }}
-                    </p>
                   <a
                     href="{{ post.url }}"
                     title="Zobacz więcej"
