@@ -127,14 +127,14 @@ small, .small {
   letter-spacing: 1px
 }
 
-strong,
 blockquote p {
   font-weight: 400;
   color: var(--color-dark-2)
 }
 
+strong,
 .bold {
-  font-weight: 500
+  font-weight: 600
 }
 
 .uppercase {
@@ -171,6 +171,9 @@ blockquote p {
   }
   .text-md-end {
     text-align: end
+  }
+  .text-md-center {
+    text-align: center
   }
   .text-behind {
     position: relative;

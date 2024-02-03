@@ -24,11 +24,11 @@
   });
   // Swup events re-init scripts
   document.addEventListener("swup:animationInStart", () => {
-    locoScroll.destroy(), locoScroll.init(), scrollTo(top)
+    locoScroll.destroy(), locoScroll.init(), scrollTo(top), document.querySelector(".site-header").classList.remove("scrolled")
   });
   document.addEventListener("swup:animationInDone", () => {
     appMain(); animationMain()
-  }), console.clear();
+  }), console.clear(); 
 
 window.addEventListener('load', function(){
   appMain(); animationMain()
