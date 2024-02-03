@@ -64,6 +64,9 @@ video {
 }
 
 .blur-load picture img {
+  position: absolute;
+  top: 0;
+  left: 0;
   transition: opacity .5s cubic-bezier(.79,0,.07,.88);
   opacity: 0
 }
@@ -74,6 +77,10 @@ video {
 
 .blend-mode {
   mix-blend-mode: exclusion;
+}
+
+.aspect_16-18 {
+  aspect-ratio: 16/18;
 }
 
 .aspect_16-13 {

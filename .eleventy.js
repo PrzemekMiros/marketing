@@ -79,7 +79,16 @@ module.exports = function(eleventyConfig) {
             width="${largestSrc.width}"
             height="${largestSrc.height}">`;
  
-          return `<div class="image-wrapper blur-load" ><svg width="320" height="135" viewBox="0 0 320 135" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="135" fill="none" fill-opacity="0"/></svg><img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
+          return `<div class="image-wrapper blur-load" >
+                  <svg 
+                    width="${largestSrc.width}" 
+                    height="${largestSrc.height}" 
+                    viewBox="0 0 ${largestSrc.width} ${largestSrc.height}" 
+                    fill="none" 
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect width="${largestSrc.width}" height="${largestSrc.height}" fill="none" fill-opacity="0"/>
+                    </svg>
+                    <img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
         });
   
   
@@ -120,7 +129,16 @@ module.exports = function(eleventyConfig) {
             width="${lowestSrc.width}"
             height="${lowestSrc.height}">`;
       
-            return `<div class="image-wrapper blur-load"><img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
+            return `<div class="image-wrapper blur-load" >
+            <svg 
+              width="100%"
+              height="100%" 
+              viewBox="0 0 ${largestSrc.width} ${largestSrc.height}" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="${largestSrc.width}" height="${largestSrc.height}" fill="none" fill-opacity="0"/>
+              </svg>
+              <img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
         });
   
 
@@ -161,7 +179,16 @@ module.exports = function(eleventyConfig) {
             width="${lowestSrc.width}"
             height="${lowestSrc.height}">`;
       
-            return `<div class="image-wrapper blur-load"><img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
+            return `<div class="image-wrapper blur-load" >
+            <svg 
+              width="100%"
+              height="100%" 
+              viewBox="0 0 ${largestSrc.width} ${largestSrc.height}" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="${largestSrc.width}" height="${largestSrc.height}" fill="none" fill-opacity="0"/>
+              </svg>
+              <img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
         });
         
         eleventyConfig.addNunjucksAsyncShortcode('clientImage', async (src, alt) => {
@@ -204,7 +231,7 @@ module.exports = function(eleventyConfig) {
       
             return `<div class="image-wrapper"><picture> ${source} ${img} </picture></div>`;
         });
-  
+   
 
       // Code blocks
       eleventyConfig.addPlugin(codeStyleHooks, {
