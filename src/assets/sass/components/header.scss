@@ -1,8 +1,8 @@
 .site-header {
   position: fixed;
-  left: 8px; 
+  left: 0; 
   top: 0;
-  width: calc(100% - 16px);
+  width: 100%;
   padding-top: 1em;
   background: var(--color-light-1);
   transform: translateY(0);
@@ -252,7 +252,10 @@
 
 @media(min-width:767px) {
   .site-header {
-    padding-top: 1.8em
+    padding-top: 1.8em;
+    left: 7px; 
+    top: 0;
+    width: calc(100% - 14px)
   }
   .site-header .container:last-child {
     padding-top: 1.8em
