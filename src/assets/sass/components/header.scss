@@ -1,17 +1,17 @@
 .site-header {
   position: fixed;
-  left: 0; 
+  left: 8px; 
   top: 0;
-  width: 100vw;
-  padding-top: 2.1em;
+  width: calc(100% - 16px);
+  padding-top: 2em;
   background: var(--color-light-1);
   transform: translateY(0);
   transition: .4s ease-in-out;
   z-index: 20
 }
 
-.site-header .container {
-  padding-bottom: 1.4em
+.site-header .container:last-child {
+  padding-top: 2em
 }
 
 .site-header.scrolled {
@@ -67,6 +67,7 @@
   font-weight: 500;
   border: none;
   border-radius: 28px;
+  overflow: hidden;
   cursor: pointer
 }
 .button-header::before {
@@ -77,7 +78,7 @@
   right: -1px;
   width: 0;
   border-radius: 28px;
-  background: #111;
+  background: var(--color-dark-1);
   transition: 0.4s cubic-bezier(.79,0,.07,.88);
   z-index: -1
 }
@@ -93,7 +94,7 @@
   transition: .4s cubic-bezier(.79,0,.07,.88)
 }
 .button-header svg path {
-  stroke:  #111;
+  stroke: #111;
   transition: .4s cubic-bezier(.79,0,.07,.88)
 }
 
@@ -254,13 +255,13 @@
     width: 102%
 }
 .button-header:hover span {
-   color: #fff
+   color: var(--color-light-1);
 }
 .button-header:hover svg {
     transform: rotate(360deg)
 }
 .button-header:hover svg path {
-    stroke: #fff
+    stroke: var(--color-light-1);
 }
 }
 

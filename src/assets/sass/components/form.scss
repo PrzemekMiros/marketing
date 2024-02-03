@@ -61,8 +61,6 @@
     }
     
     .floating-textarea {
-    min-height: 130px;
-    max-height: 260px;
     overflow: hidden;
     overflow-x: hidden
     }
@@ -140,7 +138,7 @@
 .tab-status {
   display: flex;
   align-items: center;
-  margin-bottom: 1.5em
+  margin-bottom: 2em
 }
 
 .tab-status span {

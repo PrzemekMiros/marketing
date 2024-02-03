@@ -22,7 +22,7 @@ html.has-scroll-smooth {
     position: absolute;
     right: 0;
     top: 0;
-    width: 11px;
+    width: 8px;
     height: 100vh;
     transform-origin: center right;
     transition: transform 0.3s, opacity 0.3s;
@@ -37,12 +37,12 @@ html.has-scroll-smooth {
   }
   .c-scrollbar_thumb {
     position: absolute;
-    top: 10px;
+    top: 0;
     right: 0;
     background-color: var(--color-accent-1);
     opacity: 0.75;
     width: 8px;
-    border-radius: 3px;
+    border-radius: 2px;
     cursor: -webkit-grab;
     cursor: grab; 
   }
@@ -54,47 +54,38 @@ html.has-scroll-smooth {
     position: sticky;
     top: 0;
   }
-
-  .scrollprogress-wrap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: calc(100vh + 60px);
-    width: 4px;
-    z-index: 9999
-  }
-  
-  .scrollprogress {
-    position: fixed;
-    top: -5px;
-    left: 0;
-    -webkit-appearance: none;
-    appearance: none;
-    width: 4px;
-    height: 0;
-    border: none;
-    background: var(--color-dark-1);
-    opacity: .9
-  }
-  .scrollprogress::-webkit-progress-bar {
-    background: transparent;
-  }
-  .scrollprogress::-webkit-progress-value {
-    background: #222;
-    background-attachment: fixed;
-  }
-  .scrollprogress::-moz-progress-bar {
-    background: #222;
-    background-attachment: fixed;
-  }
-  
-
-  .progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 10px;
-    height: 0;
-    background: red;
-    z-index: 9999
+  @media(min-width:767px) {
+    .scrollprogress-wrap {
+      position: fixed;
+      top: -5px;
+      left: 0;
+      height: calc(100vh + 10px);
+      width: 5px;
+      z-index: 999
+    }
+    
+    .scrollprogress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      -webkit-appearance: none;
+      appearance: none;
+      width: 7px;
+      height: 0;
+      border: none;
+      border-radius: 2px;
+      background: var(--color-accent-1);
+      opacity: .9
+    }
+    .scrollprogress::-webkit-progress-bar {
+      background: transparent;
+    }
+    .scrollprogress::-webkit-progress-value {
+      background: #222;
+      background-attachment: fixed;
+    }
+    .scrollprogress::-moz-progress-bar {
+      background: #222;
+      background-attachment: fixed;
+    }
   }

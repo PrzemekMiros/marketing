@@ -9,7 +9,7 @@ description:
         {% for post in collections.works %}
         <div class="works-grid-item">
           <div class="row gx-5 flex-md-row-reverse pb-xsmall pb-md-medium align-items-center">
-            <div class="col-md-6">
+            <div class="offset-md-1 col-md-6">
               <a href="{{ post.url }}" title="{{ post.data.title }}">
                 <div class="portfolio-item">
                   <div class="parallax-wrap reveal reveal--top aspect_16-13">
@@ -18,14 +18,14 @@ description:
                 </div>
               </a>
             </div>
-              <div class="col-md-6">
+              <div class="col-md-5">
                   <a href="{{ post.url }}" title="{{ post.data.client }}">
                     <p class="split-lines color-accent-1 bold mt-4 mt-md-0 mb-2">
                       {{ post.data.client }}
                     </p>
                   </a>
                   <a href="{{ post.url }}" title="{{ post.data.title }}">
-                    <h3 class="archive-post-title split-lines h3 my-3">
+                    <h3 class="archive-post-title split-lines h2 my-3">
                       {{ post.data.title }}
                     </h3>
                   </a>

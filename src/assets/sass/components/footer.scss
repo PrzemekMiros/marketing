@@ -39,7 +39,7 @@
 }
 
 .footer-list li {
-  margin-bottom: .5em
+  margin-bottom: .6em
 }
 
 .button-footer {
@@ -51,6 +51,7 @@
   font-weight: 500;
   border: none;
   border-radius: 28px;
+  overflow: hidden;
   cursor: pointer
 }
 
@@ -62,7 +63,7 @@
   right: -1px;
   width: 0;
   border-radius: 26px;
-  background: #111;
+  background: var(--color-dark-1);
   transition: 0.4s cubic-bezier(.79,0,.07,.88);
   z-index: -1
 }
@@ -114,13 +115,13 @@
 }
 
 .button-footer:hover span {
-    color: #fff
+    color: var(--color-light-1)
 }
 .button-footer:hover svg {
     transform: rotate(360deg)
 }
 .button-footer:hover svg path {
-    stroke: #fff
+    stroke: var(--color-light-1)
 }
 }
 

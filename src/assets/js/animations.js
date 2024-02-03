@@ -272,6 +272,21 @@ rows.forEach(function (e, i) {
     greeting.innerHTML = welcomeText;
   }
 
+     // Scroll progress
+     if (window.matchMedia("(min-width: 767px)").matches) {
+      gsap.to(".scrollprogress", {
+       height: "100vh",
+       ease: 'none',
+       scrollTrigger: { 
+         scroller: ".scrollContainer",
+         trigger: ".scrollContainer",
+         start: "top 0%",
+         end: "bottom 99%",
+         scrub: true,
+       }
+     });
+     };
+
   // parallax
   if (window.matchMedia("(min-width: 767px)").matches) {
     gsap.utils.toArray(".parallax-wrap").forEach(function (container) {

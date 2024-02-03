@@ -18,7 +18,7 @@
     right: -1em;
     width: 0;
     border-radius: 28px;
-    background: var(--color-dark-1);
+    background: var(--color-accent-1);
     transition: 0.4s cubic-bezier(.79,0,.07,.88);
     z-index: -1
 }
@@ -65,14 +65,14 @@
     }
     
     .button:hover span {
-        color: var(--color-light-2);
+        color: #111;
         transform: translateX(20px)
     }
     .button:hover svg {
         transform: rotate(360deg)
     }
     .button:hover svg path {
-        stroke: var(--color-light-2);
+        stroke: #111;
     }
     .button-big {
         position: relative;

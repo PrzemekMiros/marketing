@@ -1,17 +1,18 @@
 :root {
   --easing-1: 0.5s cubic-bezier(0.79, 0, 0.07, 0.88);
+  --radius-1: 8px;
 }
 
 body {
-  margin: 8px;
+  margin: 0;
   padding: 0;
   height: 100%;
   text-rendering: optimizeLegibility;
   font-family: var(--font-primary);
   color: var(--color-text);
-  background: var(--color-dark-1);
+  background: var(--color-light-2);
 }
-
+/*
 body::before,
 body::after {
   position: absolute;
@@ -20,15 +21,15 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;  
-  border: 8px solid var(--color-dark-1);
+  border: 8px solid var(--color-light-2);
   pointer-events: none;
   z-index: 999
 }
 
 body::after {
-  border-radius: 15px
+  border-radius: 12px
 }
-
+*/
 .scrollContainer {
   background-color: var(--color-light-1);
 }
@@ -86,6 +87,10 @@ video {
   aspect-ratio: 16/7;
 }
 
+.parallax-wrap {
+  border-radius: var(--radius-1)
+}
+
 .parallax-wrap .image-wrapper {
   height: 100%
 }
@@ -116,6 +121,27 @@ ol li {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.link-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.link-hover::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background-color: var(--color-accent-1);
+  transition: var(--easing-1);
+  z-index: -1
+}
+
+.link-hover:hover::before {
+  height: 33%;
 }
 
 @media (min-width: 767px) {
