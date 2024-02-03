@@ -3,7 +3,7 @@
   left: 8px; 
   top: 0;
   width: calc(100% - 16px);
-  padding-top: 2em;
+  padding-top: 1em;
   background: var(--color-light-1);
   transform: translateY(0);
   transition: .4s ease-in-out;
@@ -11,7 +11,7 @@
 }
 
 .site-header .container:last-child {
-  padding-top: 2em
+  padding-top: 1em
 }
 
 .site-header.scrolled {
@@ -44,7 +44,7 @@
 
 .desktop-nav ul li a {
   color: var(--color-heading);
-  font-size: clamp(16px, 1vw, 17px);
+  font-size: clamp(14px, 1vw, 17px);
   font-weight: 500;
   letter-spacing: 1px;
 }
@@ -223,7 +223,7 @@
   }
   .main-menu li a {
     position: relative;
-    font-size: 34px;
+    font-size: 28px;
     color: var(--color-heading);
     text-decoration: none;
     font-family: var(--font-primary);
@@ -251,6 +251,12 @@
 }
 
 @media(min-width:767px) {
+  .site-header {
+    padding-top: 1.8em
+  }
+  .site-header .container:last-child {
+    padding-top: 1.8em
+  }    
 .button-header:hover::before {
     width: 102%
 }

@@ -37,7 +37,7 @@
 
 .xxl, .xxl, .xl, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: var(--font-secondary);
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color-heading)
 } 
 
@@ -182,7 +182,7 @@ blockquote p {
     left: -5px;
     transform: translateY(-50%);
     font-family: var(--font-secondary);
-    font-size: 140px;
+    font-size: 120px;
     font-weight: 800;
     letter-spacing: -0.05em;
     color: var(--color-light-1);

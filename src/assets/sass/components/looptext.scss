@@ -35,7 +35,7 @@
 	border-radius: 50%;
 	border: 1px solid var(--color-border);
 	display: inline-block;
-	transform: translateY(-30px);
+	transform: translateY(-10px);
 	opacity: .25
   }
   
@@ -44,4 +44,10 @@
 	  -webkit-transform: translateX(-100%);
 	  transform: translateX(-100%);
 	}
+  }
+
+  @media(min-width:767px) {
+	.item-dot{
+		transform: translateY(-30px)
+	  }
   }

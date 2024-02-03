@@ -1,6 +1,6 @@
 ---
 layout: layouts/blog.njk
-title: Porady i ciekawostki
+title: Artykuły
 description: Porady i ciekawostki dotyczące tworzenia stron, pozycjonowania i digital marketingu. 
 pagination: 
     data: collections.posts
@@ -12,7 +12,7 @@ pagination:
   <div class="container">
       <div class="row gx-4"> 
         {% for post in blog %} 
-        <div class="col-md-4 pb-medium"> 
+        <div class="col-md-6 pb-small pb-md-medium"> 
             <a href="{{ post.url }}" title="{{ post.data.title }}">
                         <div class="portfolio-item fade-in">
                                 <div class="parallax-wrap aspect_16-10">
@@ -20,13 +20,13 @@ pagination:
                                 </div>
                         </div>
                         </a>
-                        <p class="archive-category my-2 fade-in">
-                            <small>
+                        <p class="archive-category my-3 fade-in">
+                            <small class="color-accent-1 bold">
                                 {{ post.data.tags }}
                             </small>
                         </p>
                         <a href="{{ post.url }}" title="{{ post.data.title }}">
-                            <h3 class="h5 split-text-lines line-clamp-2 mt-0 mb-2">
+                            <h3 class="h4 split-lines line-clamp-2 mt-0 mb-2">
                                 {{ post.data.title }}
                             </h3>
                         </a>

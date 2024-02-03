@@ -1,45 +1,51 @@
 {% include "partials/header.njk" %}
 
-<section class="pt-xlarge pb-small" data-scroll-section>
+<section class="pt-large pt-md-xlarge pb-small" data-scroll-section>
   <div class="container">
 
-      <div class="offset-md-2 col-md-8">
-        <div class="pb-md-small pb-small text-center">
-          <h1 class="xl split-lines single-post-title mt-0 mb-0 mb-md-5">
-            {{ client }}
-          </h1>
-          <div class="row gx-5 d-none d-md-flex">
-            <div class="col-md-4">
-                    <p class="split-text-lines small">
-                        Kategoria
-                    </p>
-                    <div class="split-text-lines line-x lx-op"></div>
-                    <p class="split-text-lines mt-4">
-                      {{ category }}
-                    </p>
-
-            </div>
-            <div class="col-md-4">
-                <p class="split-text-lines small">
-                    Usługa
-                </p>
-                <div class="line-x lx-op"></div>
-                <p class="split-text-lines mt-4">
-                  Projekt, Kodowanie
-                </p>
-            </div>
-            <div class="col-md-4">
-                <p class="split-text-lines small">
-                    Wykonano
-                </p>
-                <div class="line-x lx-op"></div>
-                <p class="split-text-lines mt-4">
-                  {{ date | dateDisplay }}
-                </p>
-            </div>
-          </div>
+    <div class="row">
+      <div class="offset-md-2 offset-xl-3 col-md-8 col-xl-6">
+        <div class="pb-md-small pb-small text-md-center">
+                    <div class="breadcrumbs mt-3 small fade-in">
+                        <a href="/" title="Strona główna">
+                            Główna
+                        </a>
+                        <span>
+                            |
+                        </span>
+                        <a href="/realizacje" title="Realizacje">
+                            Blog
+                        </a>
+                        <span>
+                            |
+                        </span>
+                        <span>
+                            {{ title }}
+                        </span>
+                    </div>
+                    <h1 class="xl split-lines single-post-title my-2">
+                      {{ client }}
+                    </h1>
+                    <div class="breadcrumbs small fade-in">
+                        <span>
+                            Kategoria:
+                        </span>
+                        <span>
+                             {{ tags }}
+                        </span>
+                        <span>
+                              |
+                        </span>
+                        <span>
+                            Opublikowano: 
+                        </span>
+                        <span>
+                             {{ date | dateDisplay }}
+                        </span>
+                    </div>
         </div>
       </div> 
+    </div>
 
     <div class="offset-md-1 col-md-10">
         <div class="parallax-wrap aspect_16-13 fade-in mb-4 mb-lg-5">
@@ -48,10 +54,10 @@
     </div>
 
     <div class="row fade-in">
-      <div class="offset-md-2 col-md-6">
+      <div class="offset-md-2 offset-xl-3 col-md-8 col-xl-6">
         {{ content | safe }}
       </div>
-      <div class="offset-md-1 col-md-2">
+      <div class="col-md-1">
         <a
         href="{{ link }}"
         title="Zobacz online"
