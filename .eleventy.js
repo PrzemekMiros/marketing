@@ -40,6 +40,11 @@ module.exports = function(eleventyConfig) {
         return collectionApi.getFilteredByGlob('src/content/faq/**/*.md');
         });
 
+        // Collection clients
+        eleventyConfig.addCollection("clients", function(collectionApi) {
+        return collectionApi.getFilteredByGlob('src/content/klienci/**/*.md');
+        });
+
         
         eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt) => {
           if (!alt) {

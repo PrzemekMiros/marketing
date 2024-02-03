@@ -76,6 +76,22 @@ video {
   opacity: 1
 } 
 
+.client-image {
+  position: relative;
+}
+
+.client-image .image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.client-image-placeholder svg {
+  width: 100%;
+  height: auto;
+}
+
 .blend-mode {
   mix-blend-mode: exclusion;
 }
