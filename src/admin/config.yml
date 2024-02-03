@@ -56,7 +56,7 @@ collections:
  # Faq
   - label: "FAQ"
     name: "faq"
-    folder: "src/faq"
+    folder: "src/content/faq"
     create: true
     fields:
       - {label: "Pytanie", name: "title", widget: "string"}
