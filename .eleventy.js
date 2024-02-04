@@ -85,14 +85,6 @@ module.exports = function(eleventyConfig) {
             height="${largestSrc.height}">`;
  
           return `<div class="image-wrapper blur-load" >
-                  <svg 
-                    width="100%" 
-                    height="auto"
-                    viewBox="0 0 ${largestSrc.width} ${largestSrc.height}" 
-                    fill="none" 
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect width="${largestSrc.width}" height="${largestSrc.height}" fill="none" fill-opacity="0"/>
-                    </svg>
                     <img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
         });
   
@@ -135,14 +127,6 @@ module.exports = function(eleventyConfig) {
             height="${lowestSrc.height}">`;
       
             return `<div class="image-wrapper blur-load" >
-            <svg 
-              width="100%"
-              height="100%" 
-              viewBox="0 0 ${largestSrc.width} ${largestSrc.height}" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg">
-              <rect width="${largestSrc.width}" height="${largestSrc.height}" fill="none" fill-opacity="0"/>
-              </svg>
               <img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
         });
   
@@ -185,14 +169,6 @@ module.exports = function(eleventyConfig) {
             height="${lowestSrc.height}">`;
       
             return `<div class="image-wrapper blur-load" >
-            <svg 
-              width="100%"
-              height="100%" 
-              viewBox="0 0 ${largestSrc.width} ${largestSrc.height}" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg">
-              <rect width="${largestSrc.width}" height="${largestSrc.height}" fill="none" fill-opacity="0"/>
-              </svg>
               <img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
         });
         

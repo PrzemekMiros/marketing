@@ -50,7 +50,6 @@
 .xl { 
   margin-bottom: .5em;
   font-size: clamp(30px, 4.3vw, 62px);
-  font-weight: 600;
   line-height: 1.2
 }
 
@@ -198,6 +197,14 @@ strong,
    width: 100%;
    background-color: var(--color-accent-1);
    z-index: -1
+}
+
+.gradient-text {
+    background: var(--color-accent-1);
+    background: linear-gradient(81deg, #192429 0%, #12252e 62%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      width: 100%
 }
 
 @media(min-width:767px) {
