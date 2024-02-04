@@ -5,7 +5,7 @@
 
     <div class="row">
       <div class="offset-md-2 offset-xl-3 col-md-8 col-xl-6">
-        <div class="pb-md-small pb-small">
+        <div class="pb-xsmall pb-md-small">
                     <div class="breadcrumbs mt-3 small fade-in">
                         <a href="/" title="Strona główna">
                             Główna
@@ -31,13 +31,13 @@
                             Kategoria:
                         </span>
                         <span>
-                             {{ tags }}
+                             {{ category }}
                         </span>
                         <span>
                               |
                         </span>
                         <span>
-                            Opublikowano: 
+                            Wykonano: 
                         </span>
                         <span>
                              {{ date | dateDisplay }}
@@ -73,11 +73,11 @@
       </div>
     </div>
 
-    <div class="pt-medium fade-in">
-      <div class="line-x"></div>
+    <div class="pt-small pt-md-medium fade-in">
+      <div class="line-x lx-op"></div>
     </div>
 
-    <div class="post-navigation pt-small">
+    <div class="post-navigation pt-xsmall">
       {%- if collections.works %} {%- set nextPost = collections.works |
       getNextCollectionItem(page) %} {%- set previousPost = collections.works |
       getPreviousCollectionItem(page) %} {%- if nextPost or previousPost %}
@@ -85,7 +85,7 @@
         {%- if previousPost %}
         <li class="hover-reveal-wrap col-md-6 prev d-none d-md-block">
           <p class="mb-4">
-            <small> Poprzedni: </small>
+            <small class="color-accent-2 bold"> Poprzedni: </small>
           </p>
           <a
             href="{{ previousPost.url | url }}"
@@ -97,7 +97,7 @@
         {% endif %} {%- if nextPost %}
         <li class="hover-reveal-wrap col-md-6 next">
           <p class="mb-4">
-            <small> Kolejny: </small>
+            <small class="color-accent-2 bold"> Kolejny: </small>
           </p>
           <a
             href="{{ nextPost.url | url }}"

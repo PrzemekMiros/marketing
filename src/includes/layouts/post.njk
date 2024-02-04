@@ -3,6 +3,7 @@
 <section class="pt-large pt-md-xlarge pb-small" data-scroll-section>
     <div class="container">
 
+        <div class="row">
             <div class="offset-md-2 offset-xl-3 col-md-8 col-xl-6">
                 <div class="single-post-title-wrap pb-xsmall pb-md-small">
                     <div class="breadcrumbs small mt-3 fade-in">
@@ -50,20 +51,21 @@
                      {% blogImage "src/" + thumbnail, title, "single-post-image img-fluid" %}
                 </div>
             </div>
+        </div>
 
-        <div class="content row gx-0 fade-in" id="pinShare">
+        <div class="content row fade-in" id="pinShare">
             <div class="offset-md-2 offset-xl-3 col-md-8 col-xl-6">
                 {{ content | safe}}
             </div>
         </div>
 
-        <div class="pt-medium fade-in">
-            <div class="line-x"></div>
+        <div class="pt-small pt-md-medium fade-in">
+            <div class="line-x lx-op"></div>
         </div>
 
-        <div class="row">
+        <div class="row g-0">
             <div class="col-md-12">
-                <div class="post-navigation pt-small">
+                <div class="post-navigation pt-xsmall">
                     {%- if collections.posts %}
                     {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
                     {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
@@ -72,7 +74,7 @@
                         {%- if previousPost %}
                         <li class="col-md-6 prev d-none d-md-block">
                             <p class="mb-4">
-                                <small>
+                                <small class="color-accent-2 bold">
                                     Poprzedni:
                                 </small>
                             </p>
@@ -84,7 +86,7 @@
                         {%- if nextPost %}
                         <li class="col-md-6 next">
                             <p class="mb-4">
-                                <small>
+                                <small class="color-accent-2 bold">
                                     Kolejny:
                                 </small>
                             </p>
