@@ -105,12 +105,38 @@ ol li {
 } 
 
 .sidebar-list {
-  padding-left: 0
+  position: relative;
+  padding-left: 2em
+}
+
+.sidebar-list::before {
+  position: absolute;
+  content: "";
+  top: 1em;
+  left: .3em;
+  bottom: 1em;
+  width: 2px;
+  background-color: var(--color-accent-1)
 }
 
 .sidebar-list li {
+  position: relative;
   margin-bottom: 1em;
+  font-size: 90%;
   line-height: 1.5
+}
+
+.sidebar-list li::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -2.4em;
+  width: 1em;
+  height: 1em;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: var(--color-light-1);
+  border: 2px solid var(--color-accent-1)
 }
  
 blockquote {
