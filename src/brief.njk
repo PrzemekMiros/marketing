@@ -1,0 +1,104 @@
+---
+layout: "layouts/nofooter.njk"
+title: Brief
+description: Wypełnij krótki brief żeby otrzymać bezpłatną wycenę. Dobry plan jest kluczem do udanego projektu.
+---
+
+<section class="brief pt-xlarge pb-large" data-scroll-section>
+    <div class="container">
+
+        <form class="" id="serviceForm" action="https://www.futurewebstudio.pl/form/forms/serviceForm.php" method="POST">
+            <h2 class="text-4xl font-extrabold mb-12">Formularz kontaktowy nr 1</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="floating-label">
+                  <input class="floating-input" type="text" name="visitor_name" required placeholder=" ">
+                  <span class="highlight"></span>
+                  <label>Imię</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="floating-label">
+                  <input class="floating-input" type="text" name="visitor_surname" required placeholder=" ">
+                  <span class="highlight"></span>
+                  <label>Nazwisko</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="floating-label">
+                  <input class="floating-input" type="text" name="visitor_field" placeholder=" ">
+                  <span class="highlight"></span>
+                  <label>Temat</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="floating-label">
+                  <input class="floating-input" type="text" name="visitor_phone" required placeholder=" ">
+                  <span class="highlight"></span>
+                  <label>Telefon</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="floating-label">
+                  <input class="floating-input" type="text" name="visitor_model" required placeholder=" ">
+                  <span class="highlight"></span>
+                  <label>Model</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="floating-label">
+                  <input class="floating-input" type="text" name="visitor_mark" required placeholder=" ">
+                  <span class="highlight"></span>
+                  <label>Marka</label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="floating-label">
+                  <textarea class="floating-input floating-textarea" name="visitor_msg" placeholder=" "></textarea>
+                  <span class="highlight"></span>
+                  <label>Wiadomość</label>
+                </div>
+              </div>
+              <div class="relative pt-20">
+                <div id="send_service_form_status" class="absolute top-2"></div>
+                <input class="wa-button btn-gradient" type="submit" value="Wyślij formularz">
+              </div>
+            </div>
+          </form> 
+
+    </div>
+</section> 
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  function handleSubmit(formId, successMessageId, successMessage) {
+    var form = document.getElementById(formId);
+    var sendFormStatus = document.getElementById(successMessageId);
+    if (form && sendFormStatus) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        sendFormStatus.innerHTML = successMessage; // Ustawia komunikat
+        sendFormStatus.style.display = 'block'; // Pokazuje element
+        var formData = new FormData(form);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://www.futurewebstudio.pl/form/forms/' + formId + '.php');
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              var res = JSON.parse(xhr.responseText);
+              if (res.status === 1) {
+                form.reset();
+              }
+            } else {
+              sendFormStatus.innerHTML = 'Wystąpił błąd podczas wysyłania formularza.';
+            }
+          }
+        };
+        xhr.send(formData);
+      });
+    }
+  }
+  handleSubmit('contactForm', 'send_contact_form_status', 'Wysłano formularz kontaktowy');
+  handleSubmit('serviceForm', 'send_service_form_status', 'Wysłano formularz serwisowy');
+});
+</script>
