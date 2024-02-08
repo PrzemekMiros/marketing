@@ -7,7 +7,7 @@ description: Wypełnij krótki brief żeby otrzymać bezpłatną wycenę. Dobry 
 <section class="brief pt-xlarge pb-large" data-scroll-section>
     <div class="container">
 
-        <form class="" id="serviceForm" action="https://www.futurewebstudio.pl/form/forms/serviceForm.php" method="POST">
+        <form class="" id="serviceForm" action="" method="POST">
             <h2 class="text-4xl font-extrabold mb-12">Formularz kontaktowy nr 1</h2>
             <div class="row">
               <div class="col-md-6">
@@ -90,7 +90,7 @@ description: Wypełnij krótki brief żeby otrzymać bezpłatną wycenę. Dobry 
                 form.reset();
               }
             } else {
-              sendFormStatus.innerHTML = 'Wystąpił błąd podczas wysyłania formularza.';
+                sendFormStatus.innerHTML = 'Wystąpił błąd podczas wysyłania formularza. Szczegóły: ' + xhr.statusText;
             }
           }
         };
