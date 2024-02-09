@@ -9,7 +9,7 @@ category:
 link: https://moneso.pl/
 thumbnail: /content/realizacje/img/moneso-thumb-big.jpg
 imageMain: /content/realizacje/img/moneso-thumb-big.jpg
-order: 4 
+order: 2 
 ---
 
 ## Meble z litego drewna

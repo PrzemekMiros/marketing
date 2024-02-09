@@ -4,101 +4,173 @@ title: Brief
 description: Wypełnij krótki brief żeby otrzymać bezpłatną wycenę. Dobry plan jest kluczem do udanego projektu.
 ---
 
-<section class="brief pt-xlarge pb-large" data-scroll-section>
+<section class="brief" data-scroll-section>
     <div class="container">
 
-        <form class="" id="serviceForm" action="" method="POST">
-            <h2 class="text-4xl font-extrabold mb-12">Formularz kontaktowy nr 1</h2>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="floating-label">
-                  <input class="floating-input" type="text" name="visitor_name" required placeholder=" ">
-                  <span class="highlight"></span>
-                  <label>Imię</label>
+        <div class="row">
+            <div class="offset-xl-1 col-md-2 col-xl-2 pt-large pt-md-xxlarge pb-md-large">
+                <div class="tab-status pt-xsmall">
+            <span class="tab active mb-3">1</span>
+            <span class="tab mb-3">2</span>
+            <span class="tab mb-3">3</span>
+            <span class="tab mb-3">4</span>
+            <span class="tab mb-3">5</span>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="floating-label">
-                  <input class="floating-input" type="text" name="visitor_surname" required placeholder=" ">
-                  <span class="highlight"></span>
-                  <label>Nazwisko</label>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="floating-label">
-                  <input class="floating-input" type="text" name="visitor_field" placeholder=" ">
-                  <span class="highlight"></span>
-                  <label>Temat</label>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="floating-label">
-                  <input class="floating-input" type="text" name="visitor_phone" required placeholder=" ">
-                  <span class="highlight"></span>
-                  <label>Telefon</label>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="floating-label">
-                  <input class="floating-input" type="text" name="visitor_model" required placeholder=" ">
-                  <span class="highlight"></span>
-                  <label>Model</label>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="floating-label">
-                  <input class="floating-input" type="text" name="visitor_mark" required placeholder=" ">
-                  <span class="highlight"></span>
-                  <label>Marka</label>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="floating-label">
-                  <textarea class="floating-input floating-textarea" name="visitor_msg" placeholder=" "></textarea>
-                  <span class="highlight"></span>
-                  <label>Wiadomość</label>
-                </div>
-              </div>
-              <div class="relative pt-20">
-                <div id="send_service_form_status" class="absolute top-2"></div>
-                <input class="wa-button btn-gradient" type="submit" value="Wyślij formularz">
-              </div>
             </div>
-          </form> 
+            <div class="multiform col-md-8 col-xl-6 pt-md-xxlarge pb-large">
+
+              <form id="briefForm" action="" method="POST">
+
+                <div role="tab-list" class="tab-list">
+    
+                  <div role="tabpanel" id="color" class="tabpanel">
+                    <h3 class="my-4">Cel odwiedzin użytkowników</h3>
+                    <div class="row g-1">
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check1" name="kontakt_z_firma" class="form-input required">
+                            <label for="check1">Kontakt z firmą</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check2" name="zakup_produktu" class="form-input required">
+                            <label for="check2">Zakup produktu</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check3" name="zapis_na_newsletter" class="form-input required">
+                            <label for="check3">Zapis na newsletter</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check4" name="zapis_na_kurs" class="form-input required">
+                            <label for="check4">Zapis na kurs</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check5" name="informacje_o_firmie" class="form-input required">
+                            <label for="check5">Informacje o firmie</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check6" name="zakup_uslugi" class="form-input required">
+                            <label for="check6">Zakup usługi</label>
+                        </div>
+                    </div>
+                  </div>
+    
+                  <div role="tabpanel" id="hobbies" class="tabpanel hidden">
+                    <h3 class="my-4">Zaznacz co już posiadasz </h3>
+                    <div class="row g-1">
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check21" name="logo_na_strone" class="form-input required">
+                            <label for="check21">Logo</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check22" name="opisy_na_strone" class="form-input required">
+                            <label for="check22">Opisy</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check23" name="zdjecia_na_strone" class="form-input required">
+                            <label for="check23">Zdjęcia</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check24" name="grafiki_na_strone" class="form-input required">
+                            <label for="check24">Grafiki</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check25" name="domena_www" class="form-input required">
+                            <label for="check25">Domena</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check26" name="hosting_www" class="form-input required">
+                            <label for="check26">Hosting</label>
+                        </div>
+                    </div>
+                  </div>
+    
+                  <div role="tabpanel" id="hobbies" class="tabpanel hidden">
+                    <h3 class="my-4">Strony które Ci się podobają</h3>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                          <div class="floating-label">
+                              <input class="form-input floating-input required" type="text" name="url_one" placeholder="">
+                              <span class="highlight"></span>
+                              <label>Adres url 1</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="floating-label">
+                              <input type="text" name="url_two" class="form-input floating-input required" placeholder="">
+                              <span class="highlight"></span>
+                              <label>Adres url 2</label>
+                          </div>                 
+                        </div>
+                        <div class="col-md-6">
+                          <div class="floating-label">
+                              <input type="text" name="url_three" class="form-input floating-input" placeholder="">
+                              <span class="highlight"></span>
+                              <label>Adres url 3</label>
+                          </div> 
+                      </div>
+                      <div class="col-md-6">
+                          <div class="floating-label">
+                              <input type="text" name="url_four" class="form-input floating-input required" placeholder="">
+                              <span class="highlight"></span>
+                              <label>Adres url 4</label>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+    
+                  <div role="tabpanel" id="color" class="tabpanel hidden">
+                    <h3 class="my-4">Dane kontaktowe</h3>
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="floating-label">
+                            <input class="form-input floating-input required" type="text" name="imie_i_nazwisko" placeholder="">
+                            <span class="highlight"></span>
+                            <label>Imię i nazwisko</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="floating-label">
+                            <input type="text" name="adres_email" class="form-input floating-input required" placeholder="">
+                            <span class="highlight"></span>
+                            <label>Adres email</label>
+                        </div>                 
+                      </div>
+                      <div class="col-md-6">
+                        <div class="floating-label">
+                            <input type="text" name="numer_telefonu" class="form-input floating-input" placeholder="">
+                            <span class="highlight"></span>
+                            <label>Numer telefonu</label>
+                        </div> 
+                    </div>
+                    <div class="col-md-6">
+                        <div class="floating-label">
+                            <input type="text" name="nazwa_firmy" class="form-input floating-input required" placeholder="">
+                            <span class="highlight"></span>
+                            <label>Nazwa firmy</label>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+    
+                  <div role="tabpanel" id="occupation" class="tabpanel hidden">
+                    <h3 class="my-4">Dodatkowe informacje</h3>
+                    <div class="floating-label">
+                        <textarea class="form-input floating-input floating-textarea" rows="5" name="dodatkowe_informacje" placeholder=" "></textarea>
+                        <span class="highlight"></span>
+                        <label>Wiadomość</label>
+                    </div>               
+                  </div>
+    
+                </div>
+                  <div class="pagination">
+                    <a class="btn hidden" id="prev">Poprzednie</a>
+                    <a class="btn" id="next">Kolejne</a>
+                    <input class="btn btn-submit hidden" id="submit" type="submit" value="Wyślij">
+                  </div>
+                  <div id="send_brief_form_status" class="form-status"></div>
+              </form>
+       </div>
+       </div>  
 
     </div>
 </section> 
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-  function handleSubmit(formId, successMessageId, successMessage) {
-    var form = document.getElementById(formId);
-    var sendFormStatus = document.getElementById(successMessageId);
-    if (form && sendFormStatus) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        sendFormStatus.innerHTML = successMessage; // Ustawia komunikat
-        sendFormStatus.style.display = 'block'; // Pokazuje element
-        var formData = new FormData(form);
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://www.futurewebstudio.pl/form/forms/' + formId + '.php');
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-              var res = JSON.parse(xhr.responseText);
-              if (res.status === 1) {
-                form.reset();
-              }
-            } else {
-                sendFormStatus.innerHTML = 'Wystąpił błąd podczas wysyłania formularza. Szczegóły: ' + xhr.statusText;
-            }
-          }
-        };
-        xhr.send(formData);
-      });
-    }
-  }
-  handleSubmit('contactForm', 'send_contact_form_status', 'Wysłano formularz kontaktowy');
-  handleSubmit('serviceForm', 'send_service_form_status', 'Wysłano formularz serwisowy');
-});
-</script>

@@ -1,7 +1,7 @@
 
 :root {
-    --color-accent-1: #31ff8b;
-    --color-accent-2: #21d26e;
+    --color-accent-1: #e86344;
+    --color-accent-2: #d04e30;
     --color-dark-1: #090c0f;
     --color-dark-2: #121416;
     --color-light-1: #f8fbf9;
@@ -61,11 +61,13 @@
   }
 
   .color-accent-1 {
-    color: var(--color-accent-1)!important
+    color: var(--color-accent-1)!important;
+    text-shadow: none
   }
 
   .color-accent-2 {
-    color: var(--color-accent-2)!important
+    color: var(--color-accent-2)!important;
+    text-shadow: none
   }
 
   .color-light {

@@ -65,14 +65,14 @@
     }
     
     .button:hover span {
-        color: #111;
+        color: #fff;
         transform: translateX(20px)
     }
     .button:hover svg {
         transform: rotate(360deg)
     }
     .button:hover svg path {
-        stroke: #111;
+        stroke: #fff;
     }
     .button-big {
         position: relative;

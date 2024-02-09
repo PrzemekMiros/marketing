@@ -19,166 +19,157 @@ description: Wypełnij krótki brief żeby otrzymać bezpłatną wycenę. Dobry 
             </div>
             <div class="multiform col-md-8 col-xl-6 pt-md-xxlarge pb-large">
 
-                <form class="" action="https://formsubmit.io/send/kontakt@futurewebstudio.pl" method="POST">
-                <input name="_redirect" type="hidden" id="name" value="https://przemekmiros.pl/forms/wyslano-formularz">
+              <form id="briefForm" action="" method="POST">
 
-<!--
-                  <input type="hidden" name="_next" value="https://przemekmiros.pl/forms/wyslano-formularz">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="text" name="_honey" style="display:none">
-            <input type="hidden" name="_template" value="box">
-            <input type="hidden" name="_subject" value="Wycena strony - Przemek Miros">
--->
-            <div role="tab-list" class="tab-list">
-
-              <div role="tabpanel" id="color" class="tabpanel">
-                <h3 class="my-4">Cel odwiedzin użytkowników</h3>
-                <div class="row g-1">
-                    <div class="col-md-6">
-                        <input type="checkbox" id="check1" name="Logo" class="form-input required">
-                        <label for="check1">Kontakt z firmą</label>
+                <div role="tab-list" class="tab-list">
+    
+                  <div role="tabpanel" id="color" class="tabpanel">
+                    <h3 class="my-4">Cel odwiedzin użytkowników</h3>
+                    <div class="row g-1">
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check1" name="kontakt_z_firma" class="form-input required">
+                            <label for="check1">Kontakt z firmą</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check2" name="zakup_produktu" class="form-input required">
+                            <label for="check2">Zakup produktu</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check3" name="zapis_na_newsletter" class="form-input required">
+                            <label for="check3">Zapis na newsletter</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check4" name="zapis_na_kurs" class="form-input required">
+                            <label for="check4">Zapis na kurs</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check5" name="informacje_o_firmie" class="form-input required">
+                            <label for="check5">Informacje o firmie</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check6" name="zakup_uslugi" class="form-input required">
+                            <label for="check6">Zakup usługi</label>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <input type="checkbox" id="check2" name="Opisy" class="form-input required">
-                        <label for="check2">Zakup produktu</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="checkbox" id="check3" name="Zdjęcia" class="form-input required">
-                        <label for="check3">Zapis na newsletter</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="checkbox" id="check4" name="Zdjęcia" class="form-input required">
-                        <label for="check4">Zapis na kurs</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="checkbox" id="check5" name="Domena" class="form-input required">
-                        <label for="check5">Informacje o firmie</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="checkbox" id="check6" name="Hosting" class="form-input required">
-                        <label for="check6">Zakup usługi</label>
-                    </div>
-                </div>
-              </div>
-
-              <div role="tabpanel" id="hobbies" class="tabpanel hidden">
-                <h3 class="my-4">Zaznacz co już posiadasz </h3>
-                <div class="row g-1">
-                    <div class="col-md-6">
-                        <input type="checkbox" id="check21" name="Logo" class="form-input required">
-                        <label for="check21">Logo</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="checkbox" id="check22" name="Opisy" class="form-input required">
-                        <label for="check22">Opisy</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="checkbox" id="check23" name="Zdjęcia" class="form-input required">
-                        <label for="check23">Zdjęcia</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="checkbox" id="check24" name="Zdjęcia" class="form-input required">
-                        <label for="check24">Grafiki</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="checkbox" id="check25" name="Domena" class="form-input required">
-                        <label for="check25">Domena</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="checkbox" id="check26" name="Hosting" class="form-input required">
-                        <label for="check26">Hosting</label>
-                    </div>
-                </div>
-              </div>
-
-              <div role="tabpanel" id="hobbies" class="tabpanel hidden">
-                <h3 class="my-4">Strony które Ci się podobają</h3>
-                <div class="row g-3">
-                    <div class="col-md-6">
-                      <div class="floating-label">
-                          <input class="form-input floating-input required" type="text" name="Strona 1" placeholder="">
-                          <span class="highlight"></span>
-                          <label>Adres url 1</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="floating-label">
-                          <input type="text" name="Strona 2" class="form-input floating-input required" placeholder="">
-                          <span class="highlight"></span>
-                          <label>Adres url 2</label>
-                      </div>                 
-                    </div>
-                    <div class="col-md-6">
-                      <div class="floating-label">
-                          <input type="text" name="Strona 3" class="form-input floating-input" placeholder="">
-                          <span class="highlight"></span>
-                          <label>Adres url 3</label>
-                      </div> 
                   </div>
-                  <div class="col-md-6">
-                      <div class="floating-label">
-                          <input type="text" name="Strona 4" class="form-input floating-input required" placeholder="">
-                          <span class="highlight"></span>
-                          <label>Adres url 4</label>
+    
+                  <div role="tabpanel" id="hobbies" class="tabpanel hidden">
+                    <h3 class="my-4">Zaznacz co już posiadasz </h3>
+                    <div class="row g-1">
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check21" name="logo_na_strone" class="form-input required">
+                            <label for="check21">Logo</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check22" name="opisy_na_strone" class="form-input required">
+                            <label for="check22">Opisy</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check23" name="zdjecia_na_strone" class="form-input required">
+                            <label for="check23">Zdjęcia</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check24" name="grafiki_na_strone" class="form-input required">
+                            <label for="check24">Grafiki</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check25" name="domena_www" class="form-input required">
+                            <label for="check25">Domena</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" id="check26" name="hosting_www" class="form-input required">
+                            <label for="check26">Hosting</label>
+                        </div>
+                    </div>
+                  </div>
+    
+                  <div role="tabpanel" id="hobbies" class="tabpanel hidden">
+                    <h3 class="my-4">Strony które Ci się podobają</h3>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                          <div class="floating-label">
+                              <input class="form-input floating-input required" type="text" name="url_one" placeholder="">
+                              <span class="highlight"></span>
+                              <label>Adres url 1</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="floating-label">
+                              <input type="text" name="url_two" class="form-input floating-input required" placeholder="">
+                              <span class="highlight"></span>
+                              <label>Adres url 2</label>
+                          </div>                 
+                        </div>
+                        <div class="col-md-6">
+                          <div class="floating-label">
+                              <input type="text" name="url_three" class="form-input floating-input" placeholder="">
+                              <span class="highlight"></span>
+                              <label>Adres url 3</label>
+                          </div> 
+                      </div>
+                      <div class="col-md-6">
+                          <div class="floating-label">
+                              <input type="text" name="url_four" class="form-input floating-input required" placeholder="">
+                              <span class="highlight"></span>
+                              <label>Adres url 4</label>
+                          </div>
+                      </div>
                       </div>
                   </div>
-                  </div>
-              </div>
-
-              <div role="tabpanel" id="color" class="tabpanel hidden">
-                <h3 class="my-4">Dane kontaktowe</h3>
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <div class="floating-label">
-                        <input class="form-input floating-input required" type="text" name="Imie i nazwisko" placeholder="">
-                        <span class="highlight"></span>
-                        <label>Imię i nazwisko</label>
+    
+                  <div role="tabpanel" id="color" class="tabpanel hidden">
+                    <h3 class="my-4">Dane kontaktowe</h3>
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="floating-label">
+                            <input class="form-input floating-input required" type="text" name="imie_i_nazwisko" placeholder="">
+                            <span class="highlight"></span>
+                            <label>Imię i nazwisko</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="floating-label">
+                            <input type="text" name="adres_email" class="form-input floating-input required" placeholder="">
+                            <span class="highlight"></span>
+                            <label>Adres email</label>
+                        </div>                 
+                      </div>
+                      <div class="col-md-6">
+                        <div class="floating-label">
+                            <input type="text" name="numer_telefonu" class="form-input floating-input" placeholder="">
+                            <span class="highlight"></span>
+                            <label>Numer telefonu</label>
+                        </div> 
+                    </div>
+                    <div class="col-md-6">
+                        <div class="floating-label">
+                            <input type="text" name="nazwa_firmy" class="form-input floating-input required" placeholder="">
+                            <span class="highlight"></span>
+                            <label>Nazwa firmy</label>
+                        </div>
+                    </div>
                     </div>
                   </div>
-                  <div class="col-md-6">
+    
+                  <div role="tabpanel" id="occupation" class="tabpanel hidden">
+                    <h3 class="my-4">Dodatkowe informacje</h3>
                     <div class="floating-label">
-                        <input type="text" name="Adres email" class="form-input floating-input required" placeholder="">
+                        <textarea class="form-input floating-input floating-textarea" rows="5" name="dodatkowe_informacje" placeholder=" "></textarea>
                         <span class="highlight"></span>
-                        <label>Adres email</label>
-                    </div>                 
+                        <label>Wiadomość</label>
+                    </div>               
                   </div>
-                  <div class="col-md-6">
-                    <div class="floating-label">
-                        <input type="text" name="Numer telefonu" class="form-input floating-input" placeholder="">
-                        <span class="highlight"></span>
-                        <label>Numer telefonu</label>
-                    </div> 
+    
                 </div>
-                <div class="col-md-6">
-                    <div class="floating-label">
-                        <input type="text" name="Nazwa firmy" class="form-input floating-input required" placeholder="">
-                        <span class="highlight"></span>
-                        <label>Nazwa firmy</label>
-                    </div>
-                </div>
-                </div>
-              </div>
-
-              <div role="tabpanel" id="occupation" class="tabpanel hidden">
-                <h3 class="my-4">Dodatkowe informacje</h3>
-                <div class="floating-label">
-                    <textarea class="form-input floating-input floating-textarea" rows="5" name="Dodatkowe informacje" placeholder=" "></textarea>
-                    <span class="highlight"></span>
-                    <label>Wiadomość</label>
-                </div>
-                
-                <input name="_formsubmit_id" type="text" style="display:none">
-              </div>
-
-            </div>
-              <div class="pagination">
-                <a class="btn hidden" id="prev">Poprzednie</a>
-                <a class="btn" id="next">Kolejne</a>
-                <button class="btn btn-submit hidden" id="submit">Wyślij</button>
-              </div>
-          </form>
+                  <div class="pagination">
+                    <a class="btn hidden" id="prev">Poprzednie</a>
+                    <a class="btn" id="next">Kolejne</a>
+                    <input class="btn btn-submit hidden" id="submit" type="submit" value="Wyślij">
+                  </div>
+                  <div id="send_brief_form_status" class="form-status"></div>
+              </form>
        </div>
-        </div>  
+       </div>  
 
     </div>
 </section> 

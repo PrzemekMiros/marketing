@@ -8,7 +8,7 @@ description:
     <div class="container">
         <div class="row">
             <div class="col-md-6 pb-xsmall">
-                <div class="contact-card">
+                <div class="contact-card fade-in">
                     <ul class="contact-list">
                         <li>
                             <a href="#">
@@ -22,7 +22,7 @@ description:
                             </a>
                         </li>
                         <li>
-                            <a href="kontakt@futurewebstudio.pl">
+                            <a href="mailto:kontakt@futurewebstudio.pl">
                                 <svg width="52" height="52" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M32.2063 17.9006H17.9643C16.9852 17.9006 16.193 18.6883 16.193 19.651L16.1841 30.153C16.1841 31.1157 16.9852 31.9033 17.9643 31.9033H32.2063C33.1854 31.9033 33.9866 31.1157 33.9866 30.153V19.651C33.9866 18.6883 33.1854 17.9006 32.2063 17.9006ZM32.2063 21.4013L25.0853 25.7771L17.9643 21.4013V19.651L25.0853 24.0268L32.2063 19.651V21.4013Z" fill="var(--color-accent-1)"/>
                                     <circle cx="24.8156" cy="25.1845" r="24.3156" stroke="#8282827a"/>
@@ -33,7 +33,7 @@ description:
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="tel:+48788660190">
                                 <svg width="52" height="52" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M19.7296 24.1791C21.0909 26.85 23.2841 29.0301 25.9594 30.3986L28.0392 28.3223C28.2945 28.0674 28.6726 27.9825 29.0035 28.0958C30.0623 28.445 31.2062 28.6337 32.3784 28.6337C32.8984 28.6337 33.3238 29.0584 33.3238 29.5775V32.8712C33.3238 33.3903 32.8984 33.815 32.3784 33.815C23.5015 33.815 16.3074 26.6329 16.3074 17.7709C16.3074 17.2518 16.7328 16.8271 17.2527 16.8271H20.5615C21.0814 16.8271 21.5068 17.2518 21.5068 17.7709C21.5068 18.9506 21.6959 20.0832 22.0457 21.1402C22.1497 21.4705 22.074 21.8386 21.8093 22.1028L19.7296 24.1791Z" fill="var(--color-accent-1)"/>
                                     <circle cx="24.8156" cy="25.4999" r="24.3156" stroke="#8282827a"/>
@@ -47,59 +47,50 @@ description:
                 </div>
             </div>
             <div class="col-md-6 pb-xsmall">
-                <form class="" action="https://formsubmit.io/send/faeccf77-f985-4c30-943b-65829013e27a" method="POST">
-                <input name="_redirect" type="hidden" id="name" value="https://przemekmiros.pl/forms/wyslano-formularz">
-                <!--
-                    <input type="hidden" name="_next" value="https://przemekmiros.pl/forms/wyslano-formularz">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="text" name="_honey" style="display:none">
-                    <input type="hidden" name="_template" value="box">
-                    <input type="hidden" name="_subject" value="Kontakt ze strony Przemek Miros">
+                  <form id="contactForm" class="fade-in" action="" method="POST">
 
-                -->
                     <div class="row g-3">
                       <div class="col-md-6">
                         <div class="floating-label">
-                          <input class="floating-input" type="text" name="Imię i nazwisko" required placeholder=" ">
+                          <input class="floating-input" type="text" name="visitor_name" required placeholder=" ">
                           <span class="highlight"></span>
                           <label>Imię i nazwisko</label>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="floating-label">
-                          <input class="floating-input" type="text" name="Adres email" required placeholder=" ">
+                          <input class="floating-input" type="text" name="visitor_mail" required placeholder=" ">
                           <span class="highlight"></span>
                           <label>Adres email</label>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="floating-label">
-                          <input class="floating-input" type="text" name="Temat" placeholder=" ">
-                          <span class="highlight"></span>
-                          <label>Temat</label>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="floating-label">
-                          <input class="floating-input" type="text" name="Numer telefonu" required placeholder=" ">
+                          <input class="floating-input" type="text" name="visitor_phone" required placeholder=" ">
                           <span class="highlight"></span>
                           <label>Telefon</label>
                         </div>
                       </div>
+                      <div class="col-md-6">
+                        <div class="floating-label">
+                          <input class="floating-input" type="text" name="visitor_subject" placeholder=" ">
+                          <span class="highlight"></span>
+                          <label>Temat</label>
+                        </div>
+                      </div>
                       <div class="col-md-12">
                         <div class="floating-label">
-                          <textarea class="floating-input floating-textarea" rows="5" name="Wiadomość" placeholder=" "></textarea>
+                          <textarea class="floating-input floating-textarea" rows="5" name="visitor_msg" placeholder=" "></textarea>
                           <span class="highlight"></span>
                           <label>Wiadomość</label>
                         </div>
                       </div>
-                      <div class="relative">
-                        
-                      <input name="_formsubmit_id" type="text" style="display:none">
+                      <div class="relative">                    
                         <button type="submit" class="fade-in magnetic mb-2 mt-1 button" data-strength="100" data-strength-text="50"><span>Wyślij formularz</span> 
                         <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" height="11" width="11" fill="none"><path d="M13 1L1 13" stroke="var(--color-accent-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M3 1H13V11" stroke="var(--color-accent-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
                         </button>
                       </div>
+                      <div id="send_contact_form_status" class="form-status"></div>
                     </div>
                   </form>
             </div>
