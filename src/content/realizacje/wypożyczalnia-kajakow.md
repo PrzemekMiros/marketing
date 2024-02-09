@@ -9,7 +9,7 @@ category:
 link: https://kajaki24.com.pl/
 thumbnail: /content/realizacje/img/kajaki-thumb-big.jpg
 imageMain: /content/realizacje/img/kajaki-thumb-big.jpg
-order: 18
+order: 8
 ---
 
 ## Wypożyczalnia Kajaków

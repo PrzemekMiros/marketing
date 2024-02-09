@@ -12,7 +12,7 @@ imageGridTwo: /content/realizacje/img/soul-2.jpg
 category: 
   - Strona internetowa
 link: https://callyoursoul.pl/
-order: 7
+order: 14
 ---
 
 ## Studio masażu i terapii

@@ -9,7 +9,7 @@ category:
 link: https://skup-anglikow.pl/
 thumbnail: /content/realizacje/img/angliki-thumb-big.jpg
 imageMain: /content/realizacje/img/angliki-thumb-big.jpg
-order: 15
+order: 13
 ---
 
 ## Skup aut z Anglii

@@ -138,7 +138,7 @@ ol li {
   top: 1em;
   left: .3em;
   bottom: 1em;
-  width: 2px;
+  width: 1px;
   background-color: var(--color-accent-1)
 }
 
@@ -152,13 +152,13 @@ ol li {
   position: absolute;
   content: "";
   top: 50%;
-  left: -2.4em;
+  left: -2.3em;
   width: 1em;
   height: 1em;
   transform: translateY(-50%);
   border-radius: 50%;
   background-color: var(--color-light-1);
-  border: 2px solid var(--color-accent-1)
+  border: 1px solid var(--color-accent-1)
 }
  
 blockquote {

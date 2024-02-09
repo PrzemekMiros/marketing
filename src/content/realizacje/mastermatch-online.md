@@ -12,7 +12,7 @@ imageGridTwo: /content/realizacje/img/master-2.jpg
 category: 
   - Strona internetowa
 link: https://mastermatch.online/
-order: 11
+order: 12
 ---
 
 ## Klub networkingowy

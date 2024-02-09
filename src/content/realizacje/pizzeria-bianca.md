@@ -12,7 +12,7 @@ imageMain: /content/realizacje/img/bianca-thumb-big.jpg
 imageMobile: /content/realizacje/img/bianca-mobile.jpg
 category:
   - Strona internetowa
-order: 13
+order: 7
 ---
 ## Pizzeria włoska z dostawą
 

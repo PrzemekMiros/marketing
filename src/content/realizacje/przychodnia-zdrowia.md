@@ -9,7 +9,7 @@ category:
 link: https://przychodniagrabow.pl/
 thumbnail: /content/realizacje/img/przychodnia-thumb-big.jpg
 imageMain: /content/realizacje/img/przychodnia-thumb-big.jpg
-order: 14
+order: 16
 ---
 
 ## Przychodnia zdrowia

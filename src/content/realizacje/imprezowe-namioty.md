@@ -12,7 +12,7 @@ imageMain: /content/realizacje/img/namioty-thumb-big.jpg
 imageMobile: /content/realizacje/img/longscroll-mobile.jpg
 category:
   - Strona internetowa
-order: 19
+order: 9
 ---
 ## Wypożyczalnia namiotów na imprezy
 
