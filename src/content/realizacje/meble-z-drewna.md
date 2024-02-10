@@ -6,7 +6,7 @@ author: Przemek Miros
 date: 2023-04-03T13:42:19.166Z
 category:
   - sklep internetowy
-link: https://moneso.pl/
+link: https://www.behance.net/gallery/191201759/Producent-mebli?
 thumbnail: /content/realizacje/img/moneso-thumb-big.jpg
 imageMain: /content/realizacje/img/moneso-thumb-big.jpg
 order: 2 
