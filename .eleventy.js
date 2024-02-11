@@ -169,7 +169,7 @@ module.exports = function(eleventyConfig) {
             height="${lowestSrc.height}">`;
       
             return `<div class="image-wrapper blur-load" >
-              <img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
+              <img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="100%" height="inherit"><picture> ${source} ${img} </picture></div>`;
         });
         
         eleventyConfig.addNunjucksAsyncShortcode('clientImage', async (src, alt) => {
