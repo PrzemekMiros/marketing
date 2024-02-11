@@ -49,7 +49,8 @@ video {
 
 .blur-load .placeholder {
   height: inherit;
-  filter: blur(10px);
+  width: 100%;
+  filter: blur(5px);
   transition: opacity .5s cubic-bezier(.79,0,.07,.88);
   object-fit: cover;
   z-index: 1
@@ -116,11 +117,7 @@ video {
   height: 100%
 }
 
-.parallax-wrap picture img {
-  height: 100%;
-  object-fit: cover;
-  object-position: top
-}
+
 
 a {
   text-decoration: none;
@@ -182,5 +179,8 @@ ol li {
 @media (min-width: 767px) {
   html {
     overflow-y: hidden;
+  }
+  .aspect_md_16-13 {
+    aspect-ratio: 16/13;
   }
 }

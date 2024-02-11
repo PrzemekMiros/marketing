@@ -11,6 +11,6 @@ category:
   - Strona internetowa
 link: https://momentstrzelce.pl/
 imageMain: /content/realizacje/img/moment-thumb-big.jpg
-order: 11
+order: 2
 ---
 Strona dla hotelu w Strzelcach opolskich. Indywidualny projekt graficzny i dedykowany motyw na Wordpressa.
