@@ -303,3 +303,7 @@ strong,
 .first-line-accent .line-parent:nth-child(1) {
   color: var(--color-accent-1);
 }
+
+.last-line-accent .line-parent:last-child {
+  color: var(--color-accent-1);
+}

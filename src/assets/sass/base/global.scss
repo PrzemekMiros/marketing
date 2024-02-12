@@ -64,6 +64,9 @@ video {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
   border-radius: var(--radius-1);
   transition: opacity .5s cubic-bezier(.79,0,.07,.88);
   opacity: 0
@@ -184,5 +187,8 @@ ol li {
   }
   .aspect_md_16-13 {
     aspect-ratio: 16/13;
+  }
+  .aspect_md_16-10 {
+    aspect-ratio: 16/10;
   }
 }

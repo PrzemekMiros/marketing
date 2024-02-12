@@ -2,15 +2,15 @@
   <div class="container">
     <div class="motto-wrap p-2 p-md-5">
       <div class="offset-md-1 col-md-10 text-center pb-xsmall">
-        <p class="h1 split-lines">
-          Zobacz firmy które realnie zwiększyły zyski dzięki <span class="color-accent-1"> dobrej stronie internetowej</span>
+        <p class="h1 split-lines last-line-accent">
+          Zobacz firmy które realnie zwiększyły zyski dzięki dobrej stronie internetowej
         </p>
       </div>
 
       <div class="row g-3">
         {% for post in collections.clients %}
         <div class="col-4 col-md-2">
-          <div class="client-image bg-light fade-in">
+          <div class="client-image fade-in">
             {% clientImage "src/" + post.data.logo, post.data.title %}  
             <div class="client-image-placeholder">
               <svg width="320" height="135" viewBox="0 0 320 135" fill="none" xmlns="http://www.w3.org/2000/svg">
