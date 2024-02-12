@@ -28,7 +28,7 @@
   display: inline-block
 }
 .logo img {
-  max-width: 155px;
+  max-width: 205px;
   height: auto
 }
 
@@ -253,6 +253,9 @@
   .site-header .container:last-child {
     padding-top: 1.3em
   }    
+  .logo img {
+    max-width: 195px
+  }
 .button-header:hover::before {
     width: 102%
 }
