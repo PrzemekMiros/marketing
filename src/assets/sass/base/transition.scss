@@ -1,17 +1,14 @@
 
 .transition-blur {
   opacity: 1;
-	filter: blur(0px);
 	transition: .3s ease-in-out
 }
   
 html.is-animating .transition-blur {
-  filter: blur(20px);
   opacity: 0
 }
 
 html.is-rendering .transition-blur {
-  filter: blur(20px);
   opacity: 0
 }
 
