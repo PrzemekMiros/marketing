@@ -29,7 +29,7 @@ module.exports = function(eleventyConfig) {
         eleventyConfig.addCollection('works', (collection) => {
           const works = collection.getFilteredByGlob('src/content/realizacje/**/*.md').reverse();
           return works.sort((a, b) => {
-            const orderA = a.data.order || 0; // Ustawiamy domyślną wartość na wypadek braku pola order
+            const orderA = a.data.order || 0;
             const orderB = b.data.order || 0;
             return orderA - orderB;
           });
@@ -45,7 +45,17 @@ module.exports = function(eleventyConfig) {
         return collectionApi.getFilteredByGlob('src/content/klienci/**/*.md');
         });
 
-        
+        // Collections towns
+        eleventyConfig.addCollection('towns', function(collectionApi) {
+        return collectionApi.getFilteredByGlob('src/content/miasta/**/*.md').reverse();
+        });
+
+        // Collections services
+        eleventyConfig.addCollection('services', function(collectionApi) {
+        return collectionApi.getFilteredByGlob('src/content/uslugi/**/*.md').reverse();
+        });
+          
+          
         eleventyConfig.addNunjucksAsyncShortcode('Image', async (src, alt) => {
           if (!alt) {
             throw new Error(`Missing \`alt\` on myImage from: ${src}`);

@@ -40,7 +40,7 @@
 
         <div class="content row gx-5 fadeIn" id="pinShare">
             <div class="offset-md-1 offset-lg-2 col-md-1 col-lg-1 d-none d-md-block">
-                <div class="pinned-progress" data-scroll data-scroll-sticky data-scroll-target="#pinShare">
+                <div class="pinned-progress d-none" data-scroll data-scroll-sticky data-scroll-target="#pinShare">
                     <div class="scrollprogress-wrap">             
                         <div class="scrollprogress"></div>
                     </div>
@@ -74,9 +74,6 @@
                             </p>
                             <a href="{{ previousPost.url | url }}" title="{{ previousPost.data.client }}"
                                 class="h3">{{ previousPost.data.title }}</a>
-                            <div class="hover-reveal">
-                                <img src="{{ previousPost.data.thumbnail }}" class="hidden-img">
-                            </div>
                         </li>
                         {% endif %}
                         {%- if nextPost %}
@@ -88,9 +85,6 @@
                             </p>
                             <a href="{{ nextPost.url | url }}" title="{{ nextPost.data.client }}"
                                 class="h3">{{ nextPost.data.title }}</a>
-                            <div class="hover-reveal">
-                                <img src="{{ nextPost.data.thumbnail }}" class="hidden-img">
-                            </div>
                         </li>
                         {% endif %}
                     </ul>
