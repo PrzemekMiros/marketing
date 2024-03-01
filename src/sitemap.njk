@@ -8,14 +8,56 @@ layout: null
     
         <url>
             <loc>
-                https://starter-ast.pages.dev/
+                https://przemekmiros.pl/
             </loc>
             <lastmod>{{ page.date.toISOString() }}</lastmod>
         </url> 
+
+        <url>
+            <loc>
+                https://przemekmiros.pl/realizacje
+            </loc>
+            <lastmod>{{ page.date.toISOString() }}</lastmod>
+        </url>
+
+        <url>
+            <loc>
+                https://przemekmiros.pl/wycena
+            </loc>
+            <lastmod>{{ page.date.toISOString() }}</lastmod>
+        </url>
+
+        <url>
+            <loc>
+                https://przemekmiros.pl/kontakt
+            </loc>
+            <lastmod>{{ page.date.toISOString() }}</lastmod>
+        </url>
+
+        <url>
+            <loc>
+                https://przemekmiros.pl/blog
+            </loc>
+            <lastmod>{{ page.date.toISOString() }}</lastmod>
+        </url>
        
     {% for page in collections.posts %}
         <url>
-            <loc>https://starter-ast.pages.dev/{{ page.url | url }}</loc>
+            <loc>https://przemekmiros.pl{{ page.url | url }}</loc>
+            <lastmod>{{ page.date.toISOString() }}</lastmod>
+        </url> 
+    {% endfor %}
+
+    {% for page in collections.services %}
+        <url>
+            <loc>https://przemekmiros.pl{{ page.url | url }}</loc>
+            <lastmod>{{ page.date.toISOString() }}</lastmod>
+        </url> 
+    {% endfor %}
+
+    {% for page in collections.towns %}
+        <url>
+            <loc>https://przemekmiros.pl{{ page.url | url }}</loc>
             <lastmod>{{ page.date.toISOString() }}</lastmod>
         </url> 
     {% endfor %}
